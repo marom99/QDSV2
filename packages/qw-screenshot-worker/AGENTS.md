@@ -1,13 +1,13 @@
 # Screenshot Worker (`@qw/design-system-screenshot-worker`)
 
-Cloudflare Worker that uses Puppeteer + Browser Rendering to capture screenshots of Kumo docs pages. Used for visual regression testing.
+Worker that uses Puppeteer + Browser Rendering to capture screenshots of QW docs pages. Used for visual regression testing.
 
 **Parent:** See [root AGENTS.md](../../AGENTS.md) for monorepo context.
 
 ## STRUCTURE
 
 ```
-kumo-screenshot-worker/
+qw-screenshot-worker/
 ├── src/
 │   └── index.ts          # Worker entry — auth, validation, screenshot logic
 ├── wrangler.jsonc        # Worker config (no secrets committed)
@@ -51,7 +51,7 @@ All requests require `X-API-Key: <API_KEY>` header.
 
 ```json
 {
-  "baseUrl": "https://kumo-ui.com",
+  "baseUrl": "https://your-docs-host.example.com",
   "pages": [
     {
       "url": "/components/button",
@@ -81,7 +81,7 @@ When `captureSections: true`, the worker looks for elements with `data-vr-demo`,
 
 ```bash
 pnpm --filter @qw/design-system-screenshot-worker dev        # Local dev server
-pnpm --filter @qw/design-system-screenshot-worker deploy     # Deploy to Cloudflare
+pnpm --filter @qw/design-system-screenshot-worker deploy     # Deploy worker
 pnpm --filter @qw/design-system-screenshot-worker typecheck  # TypeScript check
 pnpm --filter @qw/design-system-screenshot-worker lint       # oxlint
 ```
@@ -91,4 +91,4 @@ pnpm --filter @qw/design-system-screenshot-worker lint       # oxlint
 - `tsconfig.json` includes `"DOM"` in `lib` — required so TypeScript understands the DOM code inside `page.evaluate()` callbacks, even though the Worker host has no DOM.
 - `Buffer` usage requires `nodejs_compat` flag in `wrangler.toml` (already set).
 - A fresh browser page is created per URL to prevent cookie/localStorage/style bleed between pages.
-- External endpoint: `kumo-screenshot-worker.design-engineering.workers.dev`
+- External endpoint: update this to your deployed worker URL.

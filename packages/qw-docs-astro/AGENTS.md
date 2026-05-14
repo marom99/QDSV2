@@ -1,13 +1,13 @@
 # Docs Site (`@qw/design-system-docs-astro`)
 
-Astro documentation site for Kumo. React islands architecture. Deployed to Cloudflare Workers at `kumo-ui.com`.
+Astro documentation site for QW. React islands architecture. Deploy target is environment-specific; update `wrangler.jsonc` and CI secrets for your infrastructure.
 
 **Parent:** See [root AGENTS.md](../../AGENTS.md) for monorepo context.
 
 ## STRUCTURE
 
 ```
-kumo-docs-astro/
+qw-docs-astro/
 ├── src/
 │   ├── pages/
 │   │   ├── index.astro              # Homepage (HomeGrid showcase)
@@ -24,11 +24,11 @@ kumo-docs-astro/
 │   │   ├── vite-plugin-kumo-registry.ts  # virtual:kumo-registry
 │   │   ├── vite-plugin-kumo-hmr.ts       # Dev-only: rewires @qw/design-system → source
 │   │   └── component-registry.ts         # Server-side registry access
-│   └── styles/global.css            # Tailwind entry + @source to kumo dist
+│   └── styles/global.css            # Tailwind entry + @source to QW dist
 ├── scripts/
 │   └── extract-demo-examples.ts     # Parses demos → dist/demo-metadata.json
 ├── astro.config.mjs                 # React + Tailwind + 3 custom Vite plugins
-└── wrangler.jsonc                   # CF Workers deployment (static assets)
+└── wrangler.jsonc                   # Worker deployment config (static assets)
 ```
 
 ## WHERE TO LOOK
@@ -92,7 +92,7 @@ Imports: `~/layouts/DocLayout.astro`, `~/components/docs/ComponentExample.astro`
 
 ## NOTES
 
-- **Build order**: `codegen:demos` runs first in `build` script; produces `dist/demo-metadata.json` consumed by kumo registry codegen
+- **Build order**: `codegen:demos` runs first in `build` script; produces `dist/demo-metadata.json` consumed by QW registry codegen
 - **`dist/` is gitignored**: If `dist/demo-metadata.json` is missing, `codegen:registry` produces incomplete output
 - **SidebarNav is manual**: Adding a component page requires updating `SidebarNav.tsx` arrays (`staticPages`, `componentItems`, `chartItems`, `blockItems`)
 - **HomeGrid is manual**: New components need adding to the showcase grid + `componentRoutes`

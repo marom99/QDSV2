@@ -1,20 +1,20 @@
-# KUMO KNOWLEDGE BASE
+# QW DESIGN SYSTEM KNOWLEDGE BASE
 
 **Generated:** 2026-03-18 | **Commit:** 38518e34 | **Branch:** rozenmd/fix-preview
 
 ## OVERVIEW
 
-Cloudflare's React component library (`@qw/design-system`). pnpm monorepo: component library (Base UI + Tailwind v4), Astro docs site, Figma plugin, screenshot worker. ESM-only, Node 24+.
+QW's React component library (`@qw/design-system`). pnpm monorepo: component library (Base UI + Tailwind v4), Astro docs site, Figma plugin, screenshot worker. ESM-only, Node 24+.
 
 ## STRUCTURE
 
 ```
-kumo/
+qw-workspace/
 ├── packages/
-│   ├── kumo/                     # Component library → see packages/qw/AGENTS.md
-│   ├── kumo-docs-astro/          # Astro docs site → see packages/qw-docs-astro/AGENTS.md
-│   ├── kumo-figma/               # Figma plugin → see packages/qw-figma/AGENTS.md
-│   └── kumo-screenshot-worker/   # Visual regression Worker → see packages/qw-screenshot-worker/AGENTS.md
+│   ├── qw/                       # Component library → see packages/qw/AGENTS.md
+│   ├── qw-docs-astro/            # Astro docs site → see packages/qw-docs-astro/AGENTS.md
+│   ├── qw-figma/                 # Figma plugin → see packages/qw-figma/AGENTS.md
+│   └── qw-screenshot-worker/     # Visual regression Worker → see packages/qw-screenshot-worker/AGENTS.md
 ├── ci/                           # CI/CD scripts → see ci/AGENTS.md
 ├── lint/                         # Custom oxlint rules (5 rules in package, 4 at root)
 ├── .changeset/                   # Changeset files
@@ -61,8 +61,8 @@ kumo/
 ### Changesets
 
 - **Enforced for `packages/qw/`**: Pre-push hook requires changeset for npm-published library
-- **Optional for `kumo-docs-astro`**: Version appears in `/api/version` endpoint (debugging) but nothing depends on it
-- **Not needed for `kumo-figma`**: Figma plugin, not published to npm
+- **Optional for `qw-docs-astro`**: Version appears in `/api/version` endpoint (debugging) but nothing depends on it
+- **Not needed for `qw-figma`**: Figma plugin, not published to npm
 - **Pre-push hook**: Lefthook validates before push. Bypass: `git push --no-verify`
 - **AI agents NEVER**: `pnpm version`, `pnpm release`, `pnpm publish:beta`, `pnpm release:production`
 
@@ -104,7 +104,7 @@ Rules:
 pnpm dev                                          # Docs dev server (localhost:4321)
 pnpm lint                                         # oxlint + custom rules
 pnpm typecheck                                    # TypeScript check all packages
-pnpm changeset                                    # Create changeset (required for kumo changes)
+pnpm changeset                                    # Create changeset (required for QW library changes)
 
 # Package-specific (see child AGENTS.md for full lists)
 pnpm --filter @qw/design-system build              # Build library
@@ -116,14 +116,14 @@ pnpm --filter @qw/design-system-figma build        # Build Figma plugin
 ## BUILD PIPELINE
 
 ```
-kumo-docs-astro demos → dist/demo-metadata.json
+qw-docs-astro demos → dist/demo-metadata.json
                               ↓
-kumo codegen:registry → ai/component-registry.{json,md} + ai/schemas.ts
+qw codegen:registry → ai/component-registry.{json,md} + ai/schemas.ts
                               ↓
-kumo-figma build:data → generated/*.json → esbuild → code.js (IIFE, ES2017)
+qw-figma build:data → generated/*.json → esbuild → code.js (IIFE, ES2017)
 ```
 
-Cross-package dependency: registry codegen requires docs demo metadata. Run `codegen:demos` in docs before `codegen:registry` in kumo.
+Cross-package dependency: registry codegen requires docs demo metadata. Run `codegen:demos` in docs before `codegen:registry` in the component package.
 
 ## TOOLCHAIN
 
@@ -132,7 +132,7 @@ Cross-package dependency: registry codegen requires docs demo metadata. Run `cod
 | Node       | ^24.12.0  | Engine constraint                      |
 | pnpm       | >=10.21.0 | Workspace manager                      |
 | TypeScript | 5.9.2     | Via pnpm catalog                       |
-| Vite       | 7.1.7     | Library mode (kumo), dev server (docs) |
+| Vite       | 7.1.7     | Library mode (QW), dev server (docs)   |
 | Tailwind   | 4.1.17    | v4 with `light-dark()` tokens          |
 | oxlint     | 1.42.0    | Primary linter + 5 custom JS rules     |
 | Vitest     | 3.2.4     | happy-dom env, v8 coverage             |
@@ -143,7 +143,7 @@ Cross-package dependency: registry codegen requires docs demo metadata. Run `cod
 
 - **NEVER commit** Figma tokens, npm tokens, or API keys
 - `.env` files are gitignored
-- `wrangler.jsonc` contains Cloudflare account IDs (not secret but don't expose)
+- `wrangler.jsonc` may contain deployment account IDs (not secret, but don't expose unnecessarily)
 
 ## NOTES
 

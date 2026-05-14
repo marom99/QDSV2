@@ -24,7 +24,7 @@ ci/
 │   └── create-release-pr.ts         # Creates release PR via GitHub API
 ├── utils/
 │   ├── git-operations.ts      # Git ref detection (CI + local), diff, changed files
-│   ├── github-api.ts          # Octokit wrapper (hardcoded: cloudflare/kumo)
+│   ├── github-api.ts          # Octokit wrapper (update repo owner/name before CI use)
 │   └── pr-reporter.ts         # Markdown assembly + comment posting
 ├── visual-regression/
 │   └── run-visual-regression.ts  # Creates vr-screenshots-{pr}-{runId} branches
@@ -100,7 +100,7 @@ deploy-docs-preview.sh → write-kumo-docs-report.ts → ci/reports/kumo-docs-pr
 
 - **Verify-after-publish**: Both beta (45s) and production (30s) scripts sleep then check npm registry. No retry logic.
 - **`DRY_RUN=true`**: Production release script gates all destructive operations; logs what would happen
-- **Hardcoded repo**: `github-api.ts` uses `owner: "cloudflare", repo: "kumo"`
+- **Repo configuration**: `github-api.ts` currently hardcodes `owner` and `repo`; update them before using release PR automation in the QW repo
 - **Required secrets**: `NPM_TOKEN`, `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `GITHUB_TOKEN`, `FIGMA_TOKEN` (optional)
 - **Visual regression**: Creates ephemeral `vr-screenshots-{pr}-{runId}` branches for diff images
 - **Fork PR security**: `preview-deploy.yml` handles fork PRs via `workflow_run` (no secrets in fork context)

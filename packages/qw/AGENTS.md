@@ -7,7 +7,7 @@ React component library: Base UI + Tailwind v4 + Vite library mode. ESM-only, tr
 ## STRUCTURE
 
 ```
-kumo/
+qw/
 ├── src/
 │   ├── components/          # 39 UI components → see src/components/AGENTS.md
 │   ├── blocks/              # Installable blocks (NOT library exports; via CLI `kumo add`)

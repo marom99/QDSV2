@@ -7,7 +7,7 @@ Generates production-quality Figma components from `component-registry.json`. De
 ## STRUCTURE
 
 ```
-kumo-figma/
+qw-figma/
 ├── src/
 │   ├── code.ts                    # Plugin entry: GENERATORS array, page management
 │   ├── ui.html                    # Plugin UI
