@@ -6,10 +6,10 @@
  * This runs at BUILD TIME before bundling the plugin.
  *
  * Usage:
- *   pnpm --filter @cloudflare/kumo-figma build:data
+ *   pnpm --filter @qw/design-system-figma build:data
  *
  * Output:
- *   packages/kumo-figma/src/generated/phosphor-icons.json
+ *   packages/qw-figma/src/generated/phosphor-icons.json
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
@@ -94,7 +94,7 @@ function findPhosphorCore(): string {
   }
 
   throw new Error(
-    "@phosphor-icons/core not found. Run: pnpm add -D @phosphor-icons/core --filter @cloudflare/kumo-figma",
+    "@phosphor-icons/core not found. Run: pnpm add -D @phosphor-icons/core --filter @qw/design-system-figma",
   );
 }
 

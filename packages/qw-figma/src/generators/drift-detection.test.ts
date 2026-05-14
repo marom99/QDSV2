@@ -14,7 +14,7 @@ import { describe, it, expect } from "vitest";
 import { existsSync, readdirSync, readFileSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 import {
   parseTailwindTheme,
   generateExpectedSpacingScale,
@@ -92,7 +92,7 @@ describe("Figma Plugin Drift Detection", () => {
           `     import { generate${firstMissing}Components } from "./generators/${expectedFile}";\n` +
           `     { name: "${firstMissing}", execute: async (page, y) => { ... } }\n` +
           `  3. Or add to EXCLUDED_COMPONENTS in drift-detection.test.ts if intentional\n\n` +
-          `📖 See packages/kumo-figma/src/README.md for full instructions`,
+          `📖 See packages/qw-figma/src/README.md for full instructions`,
       );
     }
 
@@ -137,7 +137,7 @@ describe("Figma Plugin Drift Detection", () => {
           `🔧 To fix, add to the GENERATORS array in code.ts:\n` +
           `  import { generate${componentName}Components } from "./generators/${firstUnreg}";\n` +
           `  { name: "${componentName}", execute: async (page, y) => { ... } }\n\n` +
-          `📖 See packages/kumo-figma/src/README.md for full instructions`,
+          `📖 See packages/qw-figma/src/README.md for full instructions`,
       );
     }
 
@@ -1154,7 +1154,7 @@ describe("Figma Plugin - Registry Styling Integration", () => {
           `  - ${violations.join("\n  - ")}\n\n` +
           `🔧 To fix each generator:\n` +
           `  1. Add COMPONENT_STYLING_METADATA entry in scripts/component-registry/index.ts\n` +
-          `  2. Run: pnpm --filter @cloudflare/kumo codegen:registry\n` +
+          `  2. Run: pnpm --filter @qw/design-system codegen:registry\n` +
           `  3. Update generator to read: (registry.components.X as any).styling\n` +
           `  4. Use styling data instead of hardcoded CONFIG objects\n`,
       );
@@ -1197,10 +1197,10 @@ describe("Figma Plugin - CSS Theme Sync Validation", () => {
 
   it("should have generated theme-data.json with correct buttonCompactSize", () => {
     // Read button.tsx directly to verify generated values match
-    // Path from packages/kumo-figma/src/generators to packages/kumo/src/components
+    // Path from packages/qw-figma/src/generators to packages/qw/src/components
     const buttonPath = join(
       __dirname,
-      "../../../kumo/src/components/button/button.tsx",
+      "../../../qw/src/components/button/button.tsx",
     );
     const buttonContent = readFileSync(buttonPath, "utf-8");
 

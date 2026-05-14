@@ -16,7 +16,7 @@ import type { CodeHighlightedProps } from "./types";
  *
  * @example
  * ```tsx
- * import { ShikiProvider, CodeHighlighted } from "@cloudflare/kumo/code";
+ * import { ShikiProvider, CodeHighlighted } from "@qw/design-system/code";
  *
  * <ShikiProvider
  *   engine="javascript"

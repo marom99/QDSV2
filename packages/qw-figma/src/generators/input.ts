@@ -12,7 +12,7 @@
  *
  * Reads styles from component-registry.json (the source of truth).
  *
- * @see packages/kumo/src/components/input/input.tsx
+ * @see packages/qw/src/components/input/input.tsx
  */
 
 import {
@@ -36,7 +36,7 @@ import {
   VAR_NAMES,
 } from "./shared";
 import { logComplete } from "../logger";
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 import { parseTailwindClasses } from "../parsers/tailwind-to-figma";
 
 /**

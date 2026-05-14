@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { Accordion } from '@cloudflare/kumo/primitives/accordion';
+ * import { Accordion } from '@qw/design-system/primitives/accordion';
  * ```
  */
 

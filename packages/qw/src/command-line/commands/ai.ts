@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Output AI usage guide for @cloudflare/kumo
+ * Output AI usage guide for @qw/design-system
  * Usage: kumo ai
  */
 
@@ -12,7 +12,7 @@ import { fileURLToPath } from "node:url";
  * Print the AI usage guide to stdout
  */
 export function ai(): void {
-  // When bundled into dist/command-line/cli.js, go up 2 levels to reach packages/kumo/
+  // When bundled into dist/command-line/cli.js, go up 2 levels to reach packages/qw/
   const __dirname = dirname(fileURLToPath(import.meta.url));
   const usagePath = join(__dirname, "..", "..", "ai", "USAGE.md");
 
@@ -21,7 +21,7 @@ export function ai(): void {
     console.log(content);
   } catch {
     console.error(
-      "Could not read ai/USAGE.md. Make sure you are running this from an installed @cloudflare/kumo package.",
+      "Could not read ai/USAGE.md. Make sure you are running this from an installed @qw/design-system package.",
     );
     process.exit(1);
   }

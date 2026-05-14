@@ -1,14 +1,14 @@
 /**
  * Shiki-powered syntax highlighting for Kumo.
  *
- * This module is intentionally separate from the main `@cloudflare/kumo` export
+ * This module is intentionally separate from the main `@qw/design-system` export
  * to avoid bundling Shiki (~65-250KB) for consumers who don't need it.
  *
  * Uses hardcoded themes: `github-light` for light mode, `vesper` for dark mode.
  *
  * @example
  * ```tsx
- * import { ShikiProvider, CodeHighlighted } from "@cloudflare/kumo/code";
+ * import { ShikiProvider, CodeHighlighted } from "@qw/design-system/code";
  *
  * function App() {
  *   return (

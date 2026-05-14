@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { Fieldset } from '@cloudflare/kumo/primitives/fieldset';
+ * import { Fieldset } from '@qw/design-system/primitives/fieldset';
  * ```
  */
 

@@ -12,7 +12,7 @@ import {
   getEmptyTextConfig,
   getAllEmptyData,
 } from "./empty";
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 describe("Empty Generator - Registry Validation", () => {
   it("should have Empty component in registry", () => {

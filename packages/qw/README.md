@@ -1,11 +1,11 @@
-# @cloudflare/kumo
+# @qw/design-system
 
 Cloudflare's component library for building modern web applications.
 
 ## Installation
 
 ```bash
-pnpm add @cloudflare/kumo
+pnpm add @qw/design-system
 ```
 
 ### Peer Dependencies
@@ -21,9 +21,9 @@ pnpm add react react-dom @phosphor-icons/react
 Kumo includes a built-in CLI for quick component reference:
 
 ```bash
-npx @cloudflare/kumo ls         # List all components
-npx @cloudflare/kumo doc Button # Get component documentation
-npx @cloudflare/kumo docs       # Get all component docs
+npx @qw/design-system ls         # List all components
+npx @qw/design-system doc Button # Get component documentation
+npx @qw/design-system docs       # Get all component docs
 ```
 
 The CLI reads from `ai/component-registry.json` (generated from TypeScript types + demo examples).
@@ -34,10 +34,10 @@ The CLI reads from `ai/component-registry.json` (generated from TypeScript types
 
 ```tsx
 // Main package import
-import { Button, Input, Surface } from "@cloudflare/kumo";
+import { Button, Input, Surface } from "@qw/design-system";
 
 // Granular imports (recommended for tree-shaking)
-import { Button } from "@cloudflare/kumo/components/button";
+import { Button } from "@qw/design-system/components/button";
 ```
 
 ### Import Styles
@@ -49,23 +49,23 @@ import { Button } from "@cloudflare/kumo/components/button";
 In your main CSS file (e.g. `app.css`):
 
 ```css
-@source "../node_modules/@cloudflare/kumo/dist/**/*.{js,jsx,ts,tsx}";
-@import "@cloudflare/kumo/styles/tailwind";
+@source "../node_modules/@qw/design-system/dist/**/*.{js,jsx,ts,tsx}";
+@import "@qw/design-system/styles/tailwind";
 @import "tailwindcss";
 ```
 
-> **Import order matters** — `@cloudflare/kumo/styles` must come **before** `@import "tailwindcss"` so Kumo's `@theme` tokens are registered first.
+> **Import order matters** — `@qw/design-system/styles` must come **before** `@import "tailwindcss"` so Kumo's `@theme` tokens are registered first.
 
-> **Note:** The `@source` path is relative to your CSS file. Adjust it based on your project structure — e.g. if your CSS is in `src/styles/`, you may need `../../node_modules/@cloudflare/kumo/dist/**/*.{js,jsx,ts,tsx}`.
+> **Note:** The `@source` path is relative to your CSS file. Adjust it based on your project structure — e.g. if your CSS is in `src/styles/`, you may need `../../node_modules/@qw/design-system/dist/**/*.{js,jsx,ts,tsx}`.
 
-Alternatively, you can use the default style export (`@cloudflare/kumo/styles`) which is equivalent to `styles/tailwind`.
+Alternatively, you can use the default style export (`@qw/design-system/styles`) which is equivalent to `styles/tailwind`.
 
 If you are **not** using Tailwind CSS, use the standalone build instead (see below) — no `@source` directive is needed.
 
 #### For Non-Tailwind Users (Standalone)
 
 ```js
-import "@cloudflare/kumo/styles/standalone";
+import "@qw/design-system/styles/standalone";
 ```
 
 This imports a fully compiled CSS file with all Tailwind utilities and Kumo styles pre-compiled. No Tailwind configuration needed!
@@ -86,17 +86,17 @@ Kumo bundles [Base UI](https://base-ui.com) and re-exports all primitives for ad
 
 ```tsx
 // Barrel import - imports all primitives (convenient but larger bundle)
-import { Popover, Slider, Accordion } from "@cloudflare/kumo/primitives";
+import { Popover, Slider, Accordion } from "@qw/design-system/primitives";
 
 // Granular imports - tree-shakeable, smaller bundles (recommended)
-import { Popover } from "@cloudflare/kumo/primitives/popover";
-import { Slider } from "@cloudflare/kumo/primitives/slider";
-import { Accordion } from "@cloudflare/kumo/primitives/accordion";
+import { Popover } from "@qw/design-system/primitives/popover";
+import { Slider } from "@qw/design-system/primitives/slider";
+import { Accordion } from "@qw/design-system/primitives/accordion";
 ```
 
 > **Note:** Prefer styled Kumo components when available. Primitives are for custom components not yet in Kumo or cases requiring fine-grained control.
 >
-> **Performance tip:** Use granular imports (`@cloudflare/kumo/primitives/{name}`) for better tree-shaking and smaller bundle sizes.
+> **Performance tip:** Use granular imports (`@qw/design-system/primitives/{name}`) for better tree-shaking and smaller bundle sizes.
 
 #### Updating Primitives
 
@@ -217,7 +217,7 @@ Kumo uses **Storybook** as a live development environment for building and testi
 pnpm storybook
 
 # Or from workspace root
-pnpm --filter @cloudflare/kumo storybook
+pnpm --filter @qw/design-system storybook
 ```
 
 Storybook runs at `http://localhost:6006` with hot module replacement enabled.
@@ -271,7 +271,7 @@ pnpm dev
 Terminal 2 (from workspace root or kumo-docs):
 
 ```bash
-cd ../kumo-docs
+cd ../qw-docs
 pnpm dev
 ```
 
@@ -308,10 +308,10 @@ pnpm test:coverage
 
 **What's tested:**
 
-- All components importable from main entry: `import { Component } from "@cloudflare/kumo"`
-- All components importable via deep imports: `import { Component } from "@cloudflare/kumo/components/component-name"`
-- All blocks importable from main entry: `import { Block } from "@cloudflare/kumo"`
-- All blocks importable via deep imports: `import { Block } from "@cloudflare/kumo/blocks/block-name"`
+- All components importable from main entry: `import { Component } from "@qw/design-system"`
+- All components importable via deep imports: `import { Component } from "@qw/design-system/components/component-name"`
+- All blocks importable from main entry: `import { Block } from "@qw/design-system"`
+- All blocks importable via deep imports: `import { Block } from "@qw/design-system/blocks/block-name"`
 - Package.json exports sync with actual components and blocks
 - Export paths and formats are correct
 - Build configuration consistency
@@ -329,16 +329,16 @@ Beta releases are automatically triggered for pull requests through GitHub Actio
 **Workflow Configuration:**
 
 - **Workflow**: `preview.yml`
-- **Triggers**: Pull requests with changes to `packages/kumo/**` or `.changeset/**`
-- **Dependencies**: Requires changeset to exist for `@cloudflare/kumo`
+- **Triggers**: Pull requests with changes to `packages/qw/**` or `.changeset/**`
+- **Dependencies**: Requires changeset to exist for `@qw/design-system`
 
 **Process Flow:**
 
-1. **Validate**: Ensures changeset exists for `@cloudflare/kumo`
+1. **Validate**: Ensures changeset exists for `@qw/design-system`
 2. **Version**: Runs `pnpm run version:beta`
    - Consumes pending changesets
    - Appends `-beta.{commit-hash}` to version number
-3. **Build**: Runs `pnpm --filter @cloudflare/kumo build`
+3. **Build**: Runs `pnpm --filter @qw/design-system build`
 4. **Publish**: Publishes to npm with `beta` tag
 5. **Notify**: Posts PR comment with installation instructions
 
@@ -363,10 +363,10 @@ When a beta is published, the PR will include a comment with installation instru
 
 ```bash
 # Install the specific beta version
-npm install @cloudflare/kumo@0.1.0-beta.a1b2c3d
+npm install @qw/design-system@0.1.0-beta.a1b2c3d
 
 # Or with pnpm
-pnpm add @cloudflare/kumo@0.1.0-beta.a1b2c3d
+pnpm add @qw/design-system@0.1.0-beta.a1b2c3d
 ```
 
 ### Testing Beta Releases
@@ -379,14 +379,14 @@ pnpm add @cloudflare/kumo@0.1.0-beta.a1b2c3d
 
 ### Changeset Validation
 
-All pull requests with changes to `packages/kumo/` must include a changeset:
+All pull requests with changes to `packages/qw/` must include a changeset:
 
 ```bash
 # Create a changeset
 pnpm changeset
 ```
 
-- Select `@cloudflare/kumo` when prompted
+- Select `@qw/design-system` when prompted
 - Choose the type of change: `patch`, `minor`, or `major`
 - Write a clear description of what changed
 
@@ -411,7 +411,7 @@ This package uses [Changesets](https://github.com/changesets/changesets) for ver
    pnpm changeset
    ```
 
-   - Select `@cloudflare/kumo` from the list
+   - Select `@qw/design-system` from the list
    - Select the type of change: `patch`, `minor`, or `major`
    - Write a clear description of what changed
    - This creates a `.changeset/*.md` file describing the change
@@ -460,7 +460,7 @@ After publishing:
 
    ```bash
    git add .
-   git commit -m "chore: release @cloudflare/kumo@{version}"
+   git commit -m "chore: release @qw/design-system@{version}"
    git push
    ```
 
@@ -472,7 +472,7 @@ After publishing:
 
 3. **Verify publication**:
    ```bash
-   npm view @cloudflare/kumo versions
+   npm view @qw/design-system versions
    ```
 
 ### Semantic Versioning
@@ -502,8 +502,8 @@ The changelog includes all changeset descriptions, providing clear documentation
 If the CI fails with a changeset validation error:
 
 1. **Check if changeset exists**: Run `ls .changeset/*.md` to see pending changesets
-2. **Create changeset**: Run `pnpm changeset` and select `@cloudflare/kumo`
-3. **Verify changeset targets correct package**: Open the changeset file and ensure it includes `@cloudflare/kumo`
+2. **Create changeset**: Run `pnpm changeset` and select `@qw/design-system`
+3. **Verify changeset targets correct package**: Open the changeset file and ensure it includes `@qw/design-system`
 4. **Commit changeset**: Add and commit the changeset file to your branch
 
 **Beta Publication Failed**

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { matchSorter } from "match-sorter";
-import { CommandPalette, Badge, type HighlightRange } from "@cloudflare/kumo";
+import { CommandPalette, Badge, type HighlightRange } from "@qw/design-system";
 import {
   MagnifyingGlassIcon,
   CubeIcon,
@@ -19,8 +19,8 @@ import {
  * 3. Add its description to COMPONENT_DESCRIPTIONS below
  */
 const COMPONENTS_WITHOUT_DOCS = new Set([
-  "Code", // Deprecated: use CodeHighlighted from @cloudflare/kumo/code
-  "CodeBlock", // Deprecated: use CodeHighlighted from @cloudflare/kumo/code
+  "Code", // Deprecated: use CodeHighlighted from @qw/design-system/code
+  "CodeBlock", // Deprecated: use CodeHighlighted from @qw/design-system/code
   "DateRangePicker", // Deprecated: use DatePicker with mode="range"
   "Field",
   "Icon",

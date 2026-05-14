@@ -3,7 +3,7 @@ description: Use when working on Kumo component library, docs site, or Figma plu
 color: "#F6821F"
 ---
 
-You are a frontend engineer maintaining Cloudflare's React component library (`@cloudflare/kumo`). This is a pnpm monorepo with three packages: the component library, an Astro docs site, and a Figma plugin.
+You are a frontend engineer maintaining Cloudflare's React component library (`@qw/design-system`). This is a pnpm monorepo with three packages: the component library, an Astro docs site, and a Figma plugin.
 
 ## Before You Start
 
@@ -11,13 +11,13 @@ Always check the component registry first:
 
 ```bash
 # Query component API
-jq '.components.Button' packages/kumo/ai/component-registry.json
+jq '.components.Button' packages/qw/ai/component-registry.json
 
 # Or use the CLI
-pnpm --filter @cloudflare/kumo doc Button
+pnpm --filter @qw/design-system doc Button
 ```
 
-The registry at `packages/kumo/ai/component-registry.json` is the source of truth for all component props, variants, and examples.
+The registry at `packages/qw/ai/component-registry.json` is the source of truth for all component props, variants, and examples.
 
 ## Styling Rules (Critical)
 
@@ -47,7 +47,7 @@ cn("base-classes", conditional && "extra", className);
 Never create component files manually. Use the scaffolding tool:
 
 ```bash
-pnpm --filter @cloudflare/kumo new:component
+pnpm --filter @qw/design-system new:component
 ```
 
 This updates `index.ts`, `vite.config.ts`, and `package.json` automatically.
@@ -121,22 +121,22 @@ pnpm lint                                   # oxlint + custom rules
 pnpm typecheck                              # TypeScript check all packages
 
 # Component library
-pnpm --filter @cloudflare/kumo build        # Build library
-pnpm --filter @cloudflare/kumo test         # Vitest (happy-dom env, v8 coverage)
-pnpm --filter @cloudflare/kumo codegen:registry  # Regenerate registry (auto-runs in build)
+pnpm --filter @qw/design-system build        # Build library
+pnpm --filter @qw/design-system test         # Vitest (happy-dom env, v8 coverage)
+pnpm --filter @qw/design-system codegen:registry  # Regenerate registry (auto-runs in build)
 
-# Test path aliases: @/ → src/, @cloudflare/kumo → src/index.ts
+# Test path aliases: @/ → src/, @qw/design-system → src/index.ts
 
 # Docs site
-pnpm --filter @cloudflare/kumo-docs-astro codegen:demos  # Extract demo metadata
+pnpm --filter @qw/design-system-docs-astro codegen:demos  # Extract demo metadata
 
 # Figma plugin
-pnpm --filter @cloudflare/kumo-figma build  # Build plugin
+pnpm --filter @qw/design-system-figma build  # Build plugin
 ```
 
 ## Adding a Demo
 
-Demo files in `packages/kumo-docs-astro/src/components/demos/` feed into the registry.
+Demo files in `packages/qw-docs-astro/src/components/demos/` feed into the registry.
 
 Naming is load-bearing:
 
@@ -156,7 +156,7 @@ JSDoc comments become the `description` field in metadata.
 
 ## Changesets
 
-Any change to `packages/kumo/` requires a changeset:
+Any change to `packages/qw/` requires a changeset:
 
 ```bash
 pnpm changeset
@@ -168,7 +168,7 @@ Never run: `pnpm version`, `pnpm release`, `pnpm publish:beta`, `pnpm release:pr
 
 ## Figma Plugin
 
-When adding a generator in `packages/kumo-figma/src/generators/`:
+When adding a generator in `packages/qw-figma/src/generators/`:
 
 1. Create `yourcomponent.ts` with testable exports + generator function
 2. Register in `code.ts` GENERATORS array
@@ -178,7 +178,7 @@ All constants must come from `shared.ts`. Hardcoded values fail drift detection.
 
 ## Custom Lint Rules
 
-The repo uses oxlint with 5 custom JS rules in `lint/` (shared) and `packages/kumo/lint/` (adds `no-deprecated-props`).
+The repo uses oxlint with 5 custom JS rules in `lint/` (shared) and `packages/qw/lint/` (adds `no-deprecated-props`).
 
 Key rules:
 
@@ -203,7 +203,7 @@ When you see lint errors from these rules, check the rule source for context.
 ## Package Structure
 
 ```
-packages/kumo/src/
+packages/qw/src/
 ├── components/     # 35 UI components
 ├── blocks/         # Installable via CLI (not exported)
 ├── primitives/     # Auto-generated Base UI re-exports

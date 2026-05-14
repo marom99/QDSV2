@@ -29,7 +29,7 @@
  * Reads styles from component-registry.json (the source of truth).
  * Uses real icons from the Icon Library page.
  *
- * @see packages/kumo/src/components/combobox/combobox.tsx
+ * @see packages/qw/src/components/combobox/combobox.tsx
  */
 
 import {
@@ -55,7 +55,7 @@ import {
 import { getButtonIcon, bindIconColor } from "./icon-utils";
 import { parseTailwindClasses } from "../parsers/tailwind-to-figma";
 import { logComplete } from "../logger";
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 import themeData from "../generated/theme-data.json";
 
 /**

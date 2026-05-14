@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { cn } from "@cloudflare/kumo";
+import { cn } from "@qw/design-system";
 import { GithubLogoIcon } from "@phosphor-icons/react";
 import { ThemeToggle } from "../ThemeToggle";
 import { BaseUIIcon } from "./icons/BaseUIIcon";
@@ -158,7 +158,7 @@ export function StickyDocHeader({
             rel="noopener noreferrer"
             className="font-mono text-sm text-kumo-subtle transition-colors hover:text-kumo-default"
           >
-            @cloudflare/kumo
+            @qw/design-system
           </a>
         </div>
         <div className="hidden w-12 shrink-0 items-center justify-center md:flex">

@@ -3,8 +3,8 @@ import { fileURLToPath } from "node:url";
 import {
   THEME_CONFIG as STATIC_THEME_CONFIG,
   AVAILABLE_THEMES as STATIC_AVAILABLE_THEMES,
-} from "@cloudflare/kumo/scripts/theme-generator/config";
-import type { TokenDefinition } from "@cloudflare/kumo/scripts/theme-generator/types";
+} from "@qw/design-system/scripts/theme-generator/config";
+import type { TokenDefinition } from "@qw/design-system/scripts/theme-generator/types";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -24,7 +24,7 @@ type ColorToken = {
 // Path to the source config.ts — used for dev-mode loading and HMR watching
 const configFile = resolve(
   __dirname,
-  "../../../kumo/scripts/theme-generator/config.ts",
+  "../../../qw/scripts/theme-generator/config.ts",
 );
 
 /**

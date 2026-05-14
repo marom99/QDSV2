@@ -9,14 +9,14 @@
 - Updated dependencies [8b12a4c]
 - Updated dependencies [7d8ec27]
 - Updated dependencies [8a33813]
-  - @cloudflare/kumo@2.1.0
+  - @qw/design-system@2.1.0
 
 ## 0.3.29
 
 ### Patch Changes
 
 - Updated dependencies [8f8a55d]
-  - @cloudflare/kumo@2.0.5
+  - @qw/design-system@2.0.5
 
 ## 0.3.28
 
@@ -25,7 +25,7 @@
 - Updated dependencies [8926ee7]
 - Updated dependencies [75d4f4d]
 - Updated dependencies [f2d356d]
-  - @cloudflare/kumo@2.0.4
+  - @qw/design-system@2.0.4
 
 ## 0.3.27
 
@@ -34,7 +34,7 @@
 - Updated dependencies [3b36e21]
 - Updated dependencies [5d5d810]
 - Updated dependencies [62e093c]
-  - @cloudflare/kumo@2.0.3
+  - @qw/design-system@2.0.3
 
 ## 0.3.26
 
@@ -43,14 +43,14 @@
 - Updated dependencies [fbf3eef]
 - Updated dependencies [40491c2]
 - Updated dependencies [3427221]
-  - @cloudflare/kumo@2.0.2
+  - @qw/design-system@2.0.2
 
 ## 0.3.25
 
 ### Patch Changes
 
 - Updated dependencies [e53bd68]
-  - @cloudflare/kumo@2.0.1
+  - @qw/design-system@2.0.1
 
 ## 0.3.24
 
@@ -78,7 +78,7 @@
 - Updated dependencies [c1c60c8]
 - Updated dependencies [267ba7a]
 - Updated dependencies [6765526]
-  - @cloudflare/kumo@2.0.0
+  - @qw/design-system@2.0.0
 
 ## 0.3.23
 
@@ -100,7 +100,7 @@
 - Updated dependencies [58b5777]
 - Updated dependencies [460a603]
 - Updated dependencies [0cae077]
-  - @cloudflare/kumo@1.19.0
+  - @qw/design-system@1.19.0
 
 ## 0.3.22
 
@@ -118,7 +118,7 @@
 - Updated dependencies [6458fae]
 - Updated dependencies [cf6b917]
 - Updated dependencies [a685953]
-  - @cloudflare/kumo@1.18.0
+  - @qw/design-system@1.18.0
 
 ## 0.3.21
 
@@ -148,7 +148,7 @@
 - Updated dependencies [56e3640]
 - Updated dependencies [dcbf185]
 - Updated dependencies [f0c8952]
-  - @cloudflare/kumo@1.17.0
+  - @qw/design-system@1.17.0
 
 ## 0.3.20
 
@@ -161,7 +161,7 @@
 - Updated dependencies [15a344e]
 - Updated dependencies [5d8d3a9]
 - Updated dependencies [7e82920]
-  - @cloudflare/kumo@1.16.0
+  - @qw/design-system@1.16.0
 
 ## 0.3.19
 
@@ -170,7 +170,7 @@
 - Updated dependencies [9fbf3a8]
 - Updated dependencies [3430785]
 - Updated dependencies [73f554a]
-  - @cloudflare/kumo@1.15.0
+  - @qw/design-system@1.15.0
 
 ## 0.3.18
 
@@ -178,7 +178,7 @@
 
 - Updated dependencies [839b0cb]
 - Updated dependencies [7083a17]
-  - @cloudflare/kumo@1.14.1
+  - @qw/design-system@1.14.1
 
 ## 0.3.17
 
@@ -195,7 +195,7 @@
 - Updated dependencies [e8acdd8]
 - Updated dependencies [abbf586]
 - Updated dependencies [c6aa554]
-  - @cloudflare/kumo@1.14.0
+  - @qw/design-system@1.14.0
 
 ## 0.3.16
 
@@ -203,21 +203,21 @@
 
 - Updated dependencies [c272f6a]
 - Updated dependencies [5e12c15]
-  - @cloudflare/kumo@1.13.1
+  - @qw/design-system@1.13.1
 
 ## 0.3.15
 
 ### Patch Changes
 
 - Updated dependencies [56a8b35]
-  - @cloudflare/kumo@1.13.0
+  - @qw/design-system@1.13.0
 
 ## 0.3.14
 
 ### Patch Changes
 
 - Updated dependencies [eda8362]
-  - @cloudflare/kumo@1.12.1
+  - @qw/design-system@1.12.1
 
 ## 0.3.13
 
@@ -227,7 +227,7 @@
 - Updated dependencies [4d6de27]
 - Updated dependencies [59f7935]
 - Updated dependencies [9eaf584]
-  - @cloudflare/kumo@1.12.0
+  - @qw/design-system@1.12.0
 
 ## 0.3.12
 
@@ -247,7 +247,7 @@
 - Updated dependencies [ee1099d]
 - Updated dependencies [6dc952f]
 - Updated dependencies [2352344]
-  - @cloudflare/kumo@1.11.0
+  - @qw/design-system@1.11.0
 
 ## 0.3.11
 
@@ -273,7 +273,7 @@
 - Updated dependencies [abb7f8c]
 - Updated dependencies [8972cc4]
 - Updated dependencies [bb49d4b]
-  - @cloudflare/kumo@1.10.0
+  - @qw/design-system@1.10.0
 
 ## 0.3.10
 
@@ -282,7 +282,7 @@
 - Updated dependencies [23865db]
 - Updated dependencies [89cb5ec]
 - Updated dependencies [68c2f0d]
-  - @cloudflare/kumo@1.9.0
+  - @qw/design-system@1.9.0
 
 ## 0.3.9
 
@@ -291,7 +291,7 @@
 - Updated dependencies [0ca3b05]
 - Updated dependencies [f69df6d]
 - Updated dependencies [cf4ff38]
-  - @cloudflare/kumo@1.8.0
+  - @qw/design-system@1.8.0
 
 ## 0.3.8
 
@@ -301,7 +301,7 @@
 - Updated dependencies [835a7c0]
 - Updated dependencies [391f13a]
 - Updated dependencies [d0e1d29]
-  - @cloudflare/kumo@1.7.0
+  - @qw/design-system@1.7.0
 
 ## 0.3.7
 
@@ -313,7 +313,7 @@
 - Updated dependencies [46ecf42]
 - Updated dependencies [a9167fa]
 - Updated dependencies [f02494d]
-  - @cloudflare/kumo@1.6.0
+  - @qw/design-system@1.6.0
 
 ## 0.3.6
 
@@ -325,14 +325,14 @@
 - Updated dependencies [fa3eba3]
 - Updated dependencies [3bc976e]
 - Updated dependencies [752fdf1]
-  - @cloudflare/kumo@1.5.1
+  - @qw/design-system@1.5.1
 
 ## 0.3.5
 
 ### Patch Changes
 
 - Updated dependencies [d7a6da3]
-  - @cloudflare/kumo@1.5.0
+  - @qw/design-system@1.5.0
 
 ## 0.3.4
 
@@ -340,7 +340,7 @@
 
 - Updated dependencies [b64847d]
 - Updated dependencies [ea583d8]
-  - @cloudflare/kumo@1.4.1
+  - @qw/design-system@1.4.1
 
 ## 0.3.3
 
@@ -348,14 +348,14 @@
 
 - Updated dependencies [71d667b]
 - Updated dependencies [262e0e6]
-  - @cloudflare/kumo@1.4.0
+  - @qw/design-system@1.4.0
 
 ## 0.3.2
 
 ### Patch Changes
 
 - Updated dependencies [6a40edf]
-  - @cloudflare/kumo@1.3.0
+  - @qw/design-system@1.3.0
 
 ## 0.3.1
 
@@ -363,7 +363,7 @@
 
 - Updated dependencies [d10c711]
 - Updated dependencies [833ce8b]
-  - @cloudflare/kumo@1.2.0
+  - @qw/design-system@1.2.0
 
 ## 0.3.0
 
@@ -375,7 +375,7 @@
 
 - Updated dependencies [6dc9a73]
 - Updated dependencies [001f9e7]
-  - @cloudflare/kumo@1.1.0
+  - @qw/design-system@1.1.0
 
 ## 0.2.0
 
@@ -406,7 +406,7 @@
 - Updated dependencies [2de0c7b]
 - Updated dependencies [e9fe499]
 - Updated dependencies [7d4a4e0]
-  - @cloudflare/kumo@1.0.0
+  - @qw/design-system@1.0.0
 
 ## 0.1.2
 
@@ -415,7 +415,7 @@
 - Updated dependencies [d04c91f]
 - Updated dependencies [0e246bf]
 - Updated dependencies [d04c91f]
-  - @cloudflare/kumo@0.7.0
+  - @qw/design-system@0.7.0
 
 ## 0.1.1
 
@@ -426,4 +426,4 @@
 - Updated dependencies [4266f72]
 - Updated dependencies [4ac5fbe]
 - Updated dependencies [009097d]
-  - @cloudflare/kumo@0.6.0
+  - @qw/design-system@0.6.0

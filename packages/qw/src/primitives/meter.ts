@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { Meter } from '@cloudflare/kumo/primitives/meter';
+ * import { Meter } from '@qw/design-system/primitives/meter';
  * ```
  */
 

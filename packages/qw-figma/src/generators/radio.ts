@@ -24,7 +24,7 @@
  * - Radio indicator: 16x16 circle, bg-kumo-base (off) / bg-kumo-contrast (on)
  * - Inner dot: 8x8 circle, bg-kumo-base (visible when checked)
  *
- * @see packages/kumo/src/components/radio/radio.tsx
+ * @see packages/qw/src/components/radio/radio.tsx
  */
 
 import {
@@ -51,7 +51,7 @@ import themeData from "../generated/theme-data.json";
 import { logInfo } from "../logger";
 
 // Import registry for component metadata (note: Radio has variants defined in source, not props)
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 // Radio component exists in registry but variants are in KUMO_RADIO_VARIANTS, not props
 const _radioComponent = registry.components as Record<string, unknown>;

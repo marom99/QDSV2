@@ -10,7 +10,7 @@ import { logComplete } from "../logger";
  *
  * The Surface is a layout primitive with shadow-xs and ring ring-border.
  *
- * @see packages/kumo/src/components/surface/surface.tsx
+ * @see packages/qw/src/components/surface/surface.tsx
  */
 
 import {

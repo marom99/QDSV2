@@ -134,13 +134,13 @@ export interface ChangeClassification {
  * Returns null if the file doesn't map to a specific component.
  *
  * Examples:
- *   packages/kumo/src/components/button/button.tsx -> "button"
- *   packages/kumo/src/components/button/use-button.ts -> "button"
- *   packages/kumo/src/components/button/index.ts -> "button"
- *   packages/kumo-docs-astro/.../ButtonDemo.tsx -> "button"
+ *   packages/qw/src/components/button/button.tsx -> "button"
+ *   packages/qw/src/components/button/use-button.ts -> "button"
+ *   packages/qw/src/components/button/index.ts -> "button"
+ *   packages/qw-docs-astro/.../ButtonDemo.tsx -> "button"
  */
 export function getComponentFromFile(filePath: string): string | null {
-  // Match any file under a component directory: packages/kumo/src/components/{name}/
+  // Match any file under a component directory: packages/qw/src/components/{name}/
   const componentMatch = filePath.match(
     /packages\/kumo\/src\/components\/([^/]+)\//,
   );

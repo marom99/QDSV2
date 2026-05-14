@@ -17,7 +17,7 @@
  *   initCatalog,
  *   evaluateVisibility,
  *   resolveProps,
- * } from '@cloudflare/kumo/catalog';
+ * } from '@qw/design-system/catalog';
  *
  * // Create catalog with actions
  * const catalog = createKumoCatalog({

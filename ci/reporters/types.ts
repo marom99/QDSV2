@@ -89,7 +89,7 @@ export function buildContextFromEnv(): CIContext {
     prNumber: process.env.GITHUB_PR_NUMBER ?? process.env.PR_NUMBER ?? "",
     repository: process.env.GITHUB_REPOSITORY ?? "cloudflare/kumo",
     apiToken: process.env.GITHUB_TOKEN ?? "",
-    packageName: process.env.PACKAGE_NAME ?? "@cloudflare/kumo",
+    packageName: process.env.PACKAGE_NAME ?? "@qw/design-system",
     packageVersion: process.env.PACKAGE_VERSION ?? "",
     kumoDocsPreviewUrl: process.env.KUMO_DOCS_PREVIEW_URL,
   };

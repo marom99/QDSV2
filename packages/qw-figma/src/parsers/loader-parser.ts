@@ -70,7 +70,7 @@ export function parseLoaderSvg(): LoaderData {
   const __dirname = dirname(__filename);
   const loaderPath = join(
     __dirname,
-    "../../../kumo/src/components/loader/loader.tsx",
+    "../../../qw/src/components/loader/loader.tsx",
   );
 
   const content = readFileSync(loaderPath, "utf-8");

@@ -39,16 +39,16 @@ jobs:
         with:
           fetch-depth: 1
       - uses: ./.github/actions/install-dependencies
-      - run: pnpm --filter @cloudflare/kumo build
+      - run: pnpm --filter @qw/design-system build
       - uses: actions/upload-artifact@v4
         with:
           name: kumo-dist
-          path: packages/kumo/dist
+          path: packages/qw/dist
           retention-days: 1
       - uses: actions/upload-artifact@v4
         with:
           name: kumo-ai
-          path: packages/kumo/ai
+          path: packages/qw/ai
           retention-days: 1
 
   lint:
@@ -63,11 +63,11 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: kumo-dist
-          path: packages/kumo/dist
+          path: packages/qw/dist
       - uses: actions/download-artifact@v4
         with:
           name: kumo-ai
-          path: packages/kumo/ai
+          path: packages/qw/ai
       - run: pnpm lint
 
   typecheck:
@@ -82,11 +82,11 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: kumo-dist
-          path: packages/kumo/dist
+          path: packages/qw/dist
       - uses: actions/download-artifact@v4
         with:
           name: kumo-ai
-          path: packages/kumo/ai
+          path: packages/qw/ai
       - run: pnpm typecheck
 
   test:
@@ -101,9 +101,9 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: kumo-dist
-          path: packages/kumo/dist
+          path: packages/qw/dist
       - uses: actions/download-artifact@v4
         with:
           name: kumo-ai
-          path: packages/kumo/ai
-      - run: pnpm --filter @cloudflare/kumo test
+          path: packages/qw/ai
+      - run: pnpm --filter @qw/design-system test

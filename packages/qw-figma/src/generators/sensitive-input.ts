@@ -14,7 +14,7 @@ import { logComplete } from "../logger";
  * The SensitiveInput shows masked dots (●●●●●●●●) or revealed text,
  * with eye icon toggle and copy button on hover.
  *
- * @see packages/kumo/src/components/sensitive-input/sensitive-input.tsx
+ * @see packages/qw/src/components/sensitive-input/sensitive-input.tsx
  */
 
 import {
@@ -35,7 +35,7 @@ import {
   BORDER_RADIUS,
 } from "./shared";
 import { getButtonIcon, bindIconColor } from "./icon-utils";
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 /**
  * Extract Input component data from registry

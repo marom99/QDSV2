@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { NumberField } from '@cloudflare/kumo/primitives/number-field';
+ * import { NumberField } from '@qw/design-system/primitives/number-field';
  * ```
  */
 

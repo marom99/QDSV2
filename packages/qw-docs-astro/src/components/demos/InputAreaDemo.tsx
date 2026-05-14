@@ -1,4 +1,4 @@
-import { InputArea } from "@cloudflare/kumo";
+import { InputArea } from "@qw/design-system";
 
 export function InputAreaBasicDemo() {
   return (

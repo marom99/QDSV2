@@ -1,5 +1,5 @@
 {
-  "name": "@cloudflare/kumo-docs-astro",
+  "name": "@qw/design-system-docs-astro",
   "version": "1.5.0",
   "private": true,
   "type": "module",
@@ -21,7 +21,7 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.14",
     "@astrojs/sitemap": "^3.7.0",
-    "@cloudflare/kumo": "workspace:*",
+    "@qw/design-system": "workspace:*",
     "@phosphor-icons/react": "catalog:",
     "@tailwindcss/typography": "^0.5.19",
     "@types/turndown": "5.0.6",

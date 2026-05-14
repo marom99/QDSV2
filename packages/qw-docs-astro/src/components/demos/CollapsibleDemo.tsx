@@ -1,4 +1,4 @@
-import { Button, Collapsible, Input, Text } from "@cloudflare/kumo";
+import { Button, Collapsible, Input, Text } from "@qw/design-system";
 import { useState } from "react";
 
 /**
@@ -124,7 +124,7 @@ export function CollapsibleAccordionDemo() {
     },
     {
       title: "How do I install it?",
-      content: "Run `npm install @cloudflare/kumo` and import the components you need.",
+      content: "Run `npm install @qw/design-system` and import the components you need.",
     },
     {
       title: "Is it accessible?",

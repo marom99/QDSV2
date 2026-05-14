@@ -6,10 +6,10 @@
  * This runs at BUILD TIME before bundling the plugin.
  *
  * Usage:
- *   pnpm --filter @cloudflare/kumo-figma build:data
+ *   pnpm --filter @qw/design-system-figma build:data
  *
  * Output:
- *   packages/kumo-figma/src/generated/loader-data.json
+ *   packages/qw-figma/src/generated/loader-data.json
  */
 
 import { writeFileSync, mkdirSync } from "node:fs";

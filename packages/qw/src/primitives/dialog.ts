@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { Dialog } from '@cloudflare/kumo/primitives/dialog';
+ * import { Dialog } from '@qw/design-system/primitives/dialog';
  * ```
  */
 

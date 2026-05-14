@@ -1,5 +1,5 @@
 {
-  "name": "@cloudflare/kumo-figma",
+  "name": "@qw/design-system-figma",
   "version": "0.3.30",
   "private": true,
   "type": "module",
@@ -14,11 +14,11 @@
     "clean": "rm -rf src/generated src/code.js",
     "test": "vitest run",
     "typecheck": "pnpm run build:data && tsc --noEmit",
-    "validate": "pnpm --filter @cloudflare/kumo codegen:registry && pnpm run build:data && vitest run src/generators/drift-detection.test.ts",
+    "validate": "pnpm --filter @qw/design-system codegen:registry && pnpm run build:data && vitest run src/generators/drift-detection.test.ts",
     "figma:sync": "tsx scripts/sync-tokens-to-figma.ts"
   },
   "dependencies": {
-    "@cloudflare/kumo": "workspace:*",
+    "@qw/design-system": "workspace:*",
     "culori": "^4.0.0"
   },
   "devDependencies": {

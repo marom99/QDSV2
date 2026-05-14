@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { Collapsible } from '@cloudflare/kumo/primitives/collapsible';
+ * import { Collapsible } from '@qw/design-system/primitives/collapsible';
  * ```
  */
 

@@ -20,7 +20,7 @@ import { parseTailwindClasses } from "../parsers/tailwind-to-figma";
  * - text-kumo-default → text-color-kumo-default
  * - Arrow uses fill matching bg-kumo-base
  *
- * @see packages/kumo/src/components/tooltip/tooltip.tsx
+ * @see packages/qw/src/components/tooltip/tooltip.tsx
  */
 
 import {
@@ -42,7 +42,7 @@ import {
 import themeData from "../generated/theme-data.json";
 
 // Import registry as source of truth
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 /**
  * Tooltip dimensions

@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { PreviewCard } from '@cloudflare/kumo/primitives/preview-card';
+ * import { PreviewCard } from '@qw/design-system/primitives/preview-card';
  * ```
  */
 

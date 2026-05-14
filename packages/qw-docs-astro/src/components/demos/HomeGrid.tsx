@@ -37,8 +37,8 @@ import {
   Tooltip,
   TooltipProvider,
   useKumoToastManager,
-} from "@cloudflare/kumo";
-import { ShikiProvider, CodeHighlighted } from "@cloudflare/kumo/code";
+} from "@qw/design-system";
+import { ShikiProvider, CodeHighlighted } from "@qw/design-system/code";
 import { InputGroupDemo } from "~/components/demos/InputGroupDemo";
 import {
   MagnifyingGlassIcon,

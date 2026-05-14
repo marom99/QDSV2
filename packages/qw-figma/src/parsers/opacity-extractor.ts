@@ -119,8 +119,8 @@ export function extractOpacityModifiersFromSources(
  * To regenerate, run: `pnpm build:ai-metadata` and update this list.
  *
  * Source files scanned:
- * - packages/kumo/src/components/button/button.tsx
- * - packages/kumo/src/components/badge/badge.tsx
+ * - packages/qw/src/components/button/button.tsx
+ * - packages/qw/src/components/badge/badge.tsx
  */
 export const BUNDLED_OPACITY_MODIFIERS: OpacityModifier[] = [
   // From button.tsx primary variant: hover:bg-primary/70, disabled:bg-kumo-brand/50

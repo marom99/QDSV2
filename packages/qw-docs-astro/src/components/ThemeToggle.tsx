@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button } from "@cloudflare/kumo";
+import { Button } from "@qw/design-system";
 import { SunIcon, MoonIcon } from "@phosphor-icons/react";
 
 export function ThemeToggle() {

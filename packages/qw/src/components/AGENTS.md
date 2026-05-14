@@ -2,7 +2,7 @@
 
 39 UI components. Base UI primitives + Tailwind v4 styling. Compound component pattern throughout.
 
-**Parent:** See [packages/kumo/AGENTS.md](../../AGENTS.md) for library context.
+**Parent:** See [packages/qw/AGENTS.md](../../AGENTS.md) for library context.
 
 ## STRUCTURE
 

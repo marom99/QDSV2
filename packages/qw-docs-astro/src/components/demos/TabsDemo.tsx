@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Tabs } from "@cloudflare/kumo";
+import { Tabs } from "@qw/design-system";
 
 export function TabsDefaultDemo() {
   return (

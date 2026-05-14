@@ -1,4 +1,4 @@
-import { Sidebar, useSidebar, DropdownMenu } from "@cloudflare/kumo";
+import { Sidebar, useSidebar, DropdownMenu } from "@qw/design-system";
 import {
   HouseIcon,
   GlobeIcon,

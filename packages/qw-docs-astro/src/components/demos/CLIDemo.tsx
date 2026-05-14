@@ -219,8 +219,8 @@ function executeCommand(
   // Parse kumo command
   let commandIndex = 1;
   if (baseCommand === "npx") {
-    // Skip "@cloudflare/kumo" part
-    if (parts[1] === "@cloudflare/kumo") {
+    // Skip "@qw/design-system" part
+    if (parts[1] === "@qw/design-system") {
       commandIndex = 2;
     } else {
       return {
@@ -466,11 +466,11 @@ function executeCommand(
       if (block.dependencies && block.dependencies.length > 0) {
         output.push("This block depends on the following Kumo components:");
         for (const dep of block.dependencies) {
-          output.push(`  - ${dep} (from @cloudflare/kumo)`);
+          output.push(`  - ${dep} (from @qw/design-system)`);
         }
         output.push("");
-        output.push("Make sure @cloudflare/kumo is installed in your project:");
-        output.push("  pnpm add @cloudflare/kumo");
+        output.push("Make sure @qw/design-system is installed in your project:");
+        output.push("  pnpm add @qw/design-system");
         output.push("");
       }
 

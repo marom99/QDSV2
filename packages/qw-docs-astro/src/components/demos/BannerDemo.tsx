@@ -1,4 +1,4 @@
-import { Banner, Button, Text } from "@cloudflare/kumo";
+import { Banner, Button, Text } from "@qw/design-system";
 import { Info, WarningCircle, Warning, X } from "@phosphor-icons/react";
 
 /** Shows all banner variants with structured title and description. */

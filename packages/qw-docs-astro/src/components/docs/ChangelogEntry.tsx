@@ -1,7 +1,7 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { cn } from "@cloudflare/kumo";
-import { Text } from "@cloudflare/kumo";
+import { cn } from "@qw/design-system";
+import { Text } from "@qw/design-system";
 
 const GITHUB_COMMIT_URL = "https://github.com/cloudflare/kumo/commit/";
 

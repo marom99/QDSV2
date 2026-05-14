@@ -1,4 +1,4 @@
-# Docs Site (`@cloudflare/kumo-docs-astro`)
+# Docs Site (`@qw/design-system-docs-astro`)
 
 Astro documentation site for Kumo. React islands architecture. Deployed to Cloudflare Workers at `kumo-ui.com`.
 
@@ -22,7 +22,7 @@ kumo-docs-astro/
 │   ├── lib/
 │   │   ├── vite-plugin-kumo-colors.ts    # virtual:kumo-colors
 │   │   ├── vite-plugin-kumo-registry.ts  # virtual:kumo-registry
-│   │   ├── vite-plugin-kumo-hmr.ts       # Dev-only: rewires @cloudflare/kumo → source
+│   │   ├── vite-plugin-kumo-hmr.ts       # Dev-only: rewires @qw/design-system → source
 │   │   └── component-registry.ts         # Server-side registry access
 │   └── styles/global.css            # Tailwind entry + @source to kumo dist
 ├── scripts/
@@ -87,7 +87,7 @@ Imports: `~/layouts/DocLayout.astro`, `~/components/docs/ComponentExample.astro`
 | ----------------------------------- | ------------------------------- | ---------------------------------------- |
 | Demo function without `Demo` suffix | Won't be extracted for registry | Always suffix with `Demo`                |
 | Manually updating PropsTable        | Data comes from registry        | Registry auto-generated at build time    |
-| Forgetting `@source` in global.css  | Tailwind misses kumo classes    | Keep `@source "../../../kumo/dist/**/*"` |
+| Forgetting `@source` in global.css  | Tailwind misses kumo classes    | Keep `@source "../../../qw/dist/**/*"` |
 | Using system `prefers-color-scheme` | Site uses `data-mode` attribute | Use ThemeToggle / `localStorage.theme`   |
 
 ## NOTES
@@ -99,6 +99,6 @@ Imports: `~/layouts/DocLayout.astro`, `~/components/docs/ComponentExample.astro`
 - **Search uses CommandPalette**: Client-side search powered by component registry API; works in dev mode without build step
 - **BaseLayout has blocking inline script**: Reads `localStorage.theme` synchronously to prevent dark mode FOUC
 - **`global.css`**: `@custom-variant dark` overrides Tailwind dark to match `[data-mode="dark"]`
-- **HMR plugin dev-only**: In development, `@cloudflare/kumo` imports are rewritten to source for instant HMR
+- **HMR plugin dev-only**: In development, `@qw/design-system` imports are rewritten to source for instant HMR
 - **Dual theme code blocks**: Shiki uses github-light/vesper themes, switches via `[data-mode]` CSS
 - **Installed blocks**: `src/components/kumo/page-header/` and `resource-list/` are blocks installed via `kumo add`

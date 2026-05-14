@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Pagination } from "@cloudflare/kumo";
+import { Pagination } from "@qw/design-system";
 
 export function PaginationBasicDemo() {
   const [page, setPage] = useState(1);

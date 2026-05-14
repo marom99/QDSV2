@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DeleteResource, Button } from "@cloudflare/kumo";
+import { DeleteResource, Button } from "@qw/design-system";
 
 export function DeleteResourceBasicDemo() {
   const [open, setOpen] = useState(false);

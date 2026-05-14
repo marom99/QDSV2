@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { Checkbox } from '@cloudflare/kumo/primitives/checkbox';
+ * import { Checkbox } from '@qw/design-system/primitives/checkbox';
  * ```
  */
 

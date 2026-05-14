@@ -25,7 +25,7 @@ import { parseTailwindClasses } from "../parsers/tailwind-to-figma";
 import { logInfo, logWarn } from "../logger";
 
 // Import variant data from the registry
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 const breadcrumbsComponent = registry.components.Breadcrumbs;
 const breadcrumbsProps = breadcrumbsComponent.props;

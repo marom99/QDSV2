@@ -5,7 +5,7 @@ import {
   Select,
   Combobox,
   DropdownMenu,
-} from "@cloudflare/kumo";
+} from "@qw/design-system";
 import { Warning, X } from "@phosphor-icons/react";
 
 export function DialogBasicDemo() {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DropdownMenu, Button } from "@cloudflare/kumo";
+import { DropdownMenu, Button } from "@qw/design-system";
 import {
   PlusIcon,
   UserIcon,

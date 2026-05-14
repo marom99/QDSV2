@@ -1,4 +1,4 @@
-import { Label, Input, Select, Checkbox } from "@cloudflare/kumo";
+import { Label, Input, Select, Checkbox } from "@qw/design-system";
 
 export function LabelBasicDemo() {
   return (

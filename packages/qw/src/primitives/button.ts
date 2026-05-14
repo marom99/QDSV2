@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { Button } from '@cloudflare/kumo/primitives/button';
+ * import { Button } from '@qw/design-system/primitives/button';
  * ```
  */
 

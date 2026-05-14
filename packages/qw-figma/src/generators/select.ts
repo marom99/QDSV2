@@ -14,7 +14,7 @@
  * Reads styles from component-registry.json (the source of truth).
  * Uses real icons from the Icon Library page.
  *
- * @see packages/kumo/src/components/select/select.tsx
+ * @see packages/qw/src/components/select/select.tsx
  */
 
 import {
@@ -36,7 +36,7 @@ import {
 } from "./shared";
 import { getButtonIcon, bindIconColor } from "./icon-utils";
 import { logComplete } from "../logger";
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 // Extract Select component data from registry
 const selectRegistryStyling = (registry.components.Select as any).styling;

@@ -17,8 +17,8 @@ const RESOLVED_VIRTUAL_MODULE_ID = "\0" + VIRTUAL_MODULE_ID;
 export function kumoRegistryPlugin() {
   // Navigate from kumo-docs-astro/src/lib to kumo/ai/
   const registryFiles = {
-    markdown: resolve(__dirname, "../../../kumo/ai/component-registry.md"),
-    json: resolve(__dirname, "../../../kumo/ai/component-registry.json"),
+    markdown: resolve(__dirname, "../../../qw/ai/component-registry.md"),
+    json: resolve(__dirname, "../../../qw/ai/component-registry.json"),
   };
 
   return {

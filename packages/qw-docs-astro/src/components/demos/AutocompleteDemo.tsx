@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Autocomplete } from "@cloudflare/kumo";
+import { Autocomplete } from "@qw/design-system";
 
 const fruits = [
   "Apple",

@@ -78,7 +78,7 @@ function getSchemas(): SchemasModule {
  * - Generates AI prompts describing available components
  *
  * @example
- * import { createKumoCatalog, initCatalog } from '@cloudflare/kumo/catalog';
+ * import { createKumoCatalog, initCatalog } from '@qw/design-system/catalog';
  *
  * const catalog = createKumoCatalog({
  *   actions: {

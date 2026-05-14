@@ -4,7 +4,7 @@ import {
   PoweredByCloudflare,
   DropdownMenu,
   generateCloudflareLogoSvg,
-} from "@cloudflare/kumo";
+} from "@qw/design-system";
 import {
   CloudIcon,
   CodeIcon,

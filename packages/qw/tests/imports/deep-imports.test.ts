@@ -7,7 +7,7 @@ describe("Deep Import Patterns", () => {
 
   describe("Components with configured exports", () => {
     componentsWithExports.forEach((componentName: string) => {
-      it(`should import from @cloudflare/kumo/components/${componentName}`, async () => {
+      it(`should import from @qw/design-system/components/${componentName}`, async () => {
         const module = await import(
           `../../src/components/${componentName}/index.ts`
         );

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { DatePicker, Popover, Button, type DateRange } from "@cloudflare/kumo";
+import { DatePicker, Popover, Button, type DateRange } from "@qw/design-system";
 import { CalendarDotsIcon } from "@phosphor-icons/react";
 
 /**

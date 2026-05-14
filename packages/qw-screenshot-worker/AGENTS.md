@@ -1,4 +1,4 @@
-# Screenshot Worker (`@cloudflare/kumo-screenshot-worker`)
+# Screenshot Worker (`@qw/design-system-screenshot-worker`)
 
 Cloudflare Worker that uses Puppeteer + Browser Rendering to capture screenshots of Kumo docs pages. Used for visual regression testing.
 
@@ -22,17 +22,17 @@ kumo-screenshot-worker/
 
 ```bash
 cp .dev.vars.example .dev.vars   # then fill in API_KEY
-pnpm --filter @cloudflare/kumo-screenshot-worker dev
+pnpm --filter @qw/design-system-screenshot-worker dev
 ```
 
 **Deploy:**
 
 ```bash
 # Set secret (one-time per environment):
-pnpm --filter @cloudflare/kumo-screenshot-worker exec wrangler secret put API_KEY
+pnpm --filter @qw/design-system-screenshot-worker exec wrangler secret put API_KEY
 
 # Deploy:
-pnpm --filter @cloudflare/kumo-screenshot-worker deploy
+pnpm --filter @qw/design-system-screenshot-worker deploy
 ```
 
 ## SECRETS
@@ -80,10 +80,10 @@ When `captureSections: true`, the worker looks for elements with `data-vr-demo`,
 ## COMMANDS
 
 ```bash
-pnpm --filter @cloudflare/kumo-screenshot-worker dev        # Local dev server
-pnpm --filter @cloudflare/kumo-screenshot-worker deploy     # Deploy to Cloudflare
-pnpm --filter @cloudflare/kumo-screenshot-worker typecheck  # TypeScript check
-pnpm --filter @cloudflare/kumo-screenshot-worker lint       # oxlint
+pnpm --filter @qw/design-system-screenshot-worker dev        # Local dev server
+pnpm --filter @qw/design-system-screenshot-worker deploy     # Deploy to Cloudflare
+pnpm --filter @qw/design-system-screenshot-worker typecheck  # TypeScript check
+pnpm --filter @qw/design-system-screenshot-worker lint       # oxlint
 ```
 
 ## NOTES

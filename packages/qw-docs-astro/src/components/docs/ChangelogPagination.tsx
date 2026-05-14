@@ -1,4 +1,4 @@
-import { Pagination } from "@cloudflare/kumo";
+import { Pagination } from "@qw/design-system";
 
 interface ChangelogPaginationProps {
   page: number;

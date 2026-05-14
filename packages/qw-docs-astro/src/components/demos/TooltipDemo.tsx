@@ -1,4 +1,4 @@
-import { Tooltip, TooltipProvider, Button } from "@cloudflare/kumo";
+import { Tooltip, TooltipProvider, Button } from "@qw/design-system";
 import { Info, PlusIcon, TranslateIcon } from "@phosphor-icons/react";
 
 export function TooltipHeroDemo() {

@@ -1,4 +1,4 @@
-import { Button, LinkButton } from "@cloudflare/kumo";
+import { Button, LinkButton } from "@qw/design-system";
 import { ArrowSquareOutIcon, PlusIcon } from "@phosphor-icons/react";
 
 export function ButtonBasicDemo() {

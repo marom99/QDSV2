@@ -5,7 +5,7 @@ import {
   DropdownMenu,
   LayerCard,
   Table,
-} from "@cloudflare/kumo";
+} from "@qw/design-system";
 import {
   DotsThree,
   EnvelopeSimple,

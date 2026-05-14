@@ -1,4 +1,4 @@
-import { Badge } from "@cloudflare/kumo";
+import { Badge } from "@qw/design-system";
 
 export function BadgeSemanticVariantsDemo() {
   return (

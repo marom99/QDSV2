@@ -242,7 +242,7 @@ Every PR will have an associated pre-release build for all releasable packages w
 
 ## PR Tests
 
-Every PR should include tests for the functionality that's being added. Most changes will be to [Kumo](packages/kumo/src/) (using Vitest), and should include unit tests within the testing harness of those packages. For documentation on how these testing frameworks work, see:
+Every PR should include tests for the functionality that's being added. Most changes will be to [Kumo](packages/qw/src/) (using Vitest), and should include unit tests within the testing harness of those packages. For documentation on how these testing frameworks work, see:
 
 - Vitest: <https://vitest.dev/guide>
 

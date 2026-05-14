@@ -24,7 +24,7 @@ import {
 } from "./select";
 
 // Import registry as source of truth
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 const selectStyling = (registry.components.Select as any).styling;
 

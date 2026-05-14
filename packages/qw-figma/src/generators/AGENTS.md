@@ -2,7 +2,7 @@
 
 37 component generators creating Figma components from `component-registry.json`. Registry is source of truth.
 
-**Parent:** See [packages/kumo-figma/AGENTS.md](../../AGENTS.md) for plugin context.
+**Parent:** See [packages/qw-figma/AGENTS.md](../../AGENTS.md) for plugin context.
 
 ## STRUCTURE
 
@@ -26,7 +26,7 @@ Every generator follows this structure:
 ```typescript
 import { SPACING, FONT_SIZE, createAutoLayoutFrame, ... } from "./shared";
 import { parseTailwindClasses } from "../parsers/tailwind-to-figma";
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 ```
 
 ### 2. Extract Registry Data

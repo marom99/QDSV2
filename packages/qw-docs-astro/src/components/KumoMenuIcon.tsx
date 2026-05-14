@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { cn } from "@cloudflare/kumo";
+import { cn } from "@qw/design-system";
 
 interface KumoMenuIconProps {
   className?: string;

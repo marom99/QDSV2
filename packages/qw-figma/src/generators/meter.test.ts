@@ -27,7 +27,7 @@ import {
 import { BORDER_RADIUS } from "./shared";
 
 // Import registry as source of truth
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 const meterComponent = registry.components.Meter;
 const meterProps = meterComponent.props;

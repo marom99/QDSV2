@@ -12,8 +12,8 @@
  * Note: Figma doesn't support SVG animations, so this shows a static
  * representation at the animation midpoint.
  *
- * @see packages/kumo/src/components/loader/loader.tsx
- * @see packages/kumo-figma/src/build-loader-data.ts
+ * @see packages/qw/src/components/loader/loader.tsx
+ * @see packages/qw-figma/src/build-loader-data.ts
  */
 
 import loaderData from "../generated/loader-data.json";

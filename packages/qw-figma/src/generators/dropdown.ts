@@ -29,7 +29,7 @@ import { logComplete } from "../logger";
  *
  * Uses real icons from the Icon Library page.
  *
- * @see packages/kumo/src/components/dropdown/dropdown.tsx
+ * @see packages/qw/src/components/dropdown/dropdown.tsx
  */
 
 import {
@@ -56,7 +56,7 @@ import {
 } from "./shared";
 import themeData from "../generated/theme-data.json";
 import { getButtonIcon, bindIconColor } from "./icon-utils";
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 /**
  * Extract DropdownMenu component data from registry (for metadata)

@@ -239,10 +239,10 @@ export async function add(blockName: string | undefined): Promise<void> {
   if (block.dependencies.length > 0) {
     console.log(`\n📚 This block depends on the following Kumo components:\n`);
     for (const dep of block.dependencies) {
-      console.log(`  - ${dep} (from @cloudflare/kumo)`);
+      console.log(`  - ${dep} (from @qw/design-system)`);
     }
-    console.log("\nMake sure @cloudflare/kumo is installed in your project:");
-    console.log("  pnpm add @cloudflare/kumo");
+    console.log("\nMake sure @qw/design-system is installed in your project:");
+    console.log("  pnpm add @qw/design-system");
   }
 
   // Show import path

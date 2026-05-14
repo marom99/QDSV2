@@ -10,12 +10,12 @@ import {
 } from "../utils/git-operations";
 
 /**
- * Validates that a changeset exists for the @cloudflare/kumo package
- * when files in packages/kumo/ are modified in a pull request.
+ * Validates that a changeset exists for the @qw/design-system package
+ * when files in packages/qw/ are modified in a pull request.
  */
 
-const KUMO_PACKAGE_NAME = "@cloudflare/kumo";
-const KUMO_PATH = "packages/kumo";
+const KUMO_PACKAGE_NAME = "@qw/design-system";
+const KUMO_PATH = "packages/qw";
 const CHANGESET_DIR = ".changeset";
 
 interface ChangesetFile {
@@ -44,7 +44,7 @@ function main() {
 
   // Skip validation on Changesets release PRs. The `changesets/action` bot
   // opens these PRs from a `changeset-release/<target>` branch and, by
-  // design, their diff modifies `packages/kumo/` (version bump + CHANGELOG)
+  // design, their diff modifies `packages/qw/` (version bump + CHANGELOG)
   // while removing — not adding — `.changeset/*.md` files. Running the
   // "must add a new changeset" rule here would always fail. See
   // https://github.com/changesets/action for the branch-name convention.
@@ -66,12 +66,12 @@ function main() {
   const hasKumoChanges = checkForKumoChanges();
   if (!hasKumoChanges) {
     console.log(
-      "No changes detected in packages/kumo/, skipping changeset validation",
+      "No changes detected in packages/qw/, skipping changeset validation",
     );
     return;
   }
 
-  console.log("Changes detected in packages/kumo/");
+  console.log("Changes detected in packages/qw/");
 
   // Check for newly added changesets in this MR
   const newChangesets = getNewlyAddedChangesets();
@@ -95,11 +95,11 @@ function main() {
     // Check if there are any new changesets at all
     if (newChangesets.length === 0) {
       console.error(
-        "\x1b[31;1m❌ ERROR: Changes detected in packages/kumo/ but no NEW changeset files found\x1b[0m",
+        "\x1b[31;1m❌ ERROR: Changes detected in packages/qw/ but no NEW changeset files found\x1b[0m",
       );
     } else {
       console.error(
-        "\x1b[31;1m❌ ERROR: Found NEW changeset files, but none target @cloudflare/kumo\x1b[0m",
+        "\x1b[31;1m❌ ERROR: Found NEW changeset files, but none target @qw/design-system\x1b[0m",
       );
       console.error("");
       console.error("New changesets found:");
@@ -112,7 +112,7 @@ function main() {
     console.error("\x1b[33;1m📋 To fix this issue:\x1b[0m");
     console.error("   1. Run: \x1b[36mpnpm changeset\x1b[0m");
     console.error(
-      '   2. Select "\x1b[36m@cloudflare/kumo\x1b[0m" when prompted',
+      '   2. Select "\x1b[36m@qw/design-system\x1b[0m" when prompted',
     );
     console.error(
       "   3. Choose the appropriate change type (patch/minor/major)",
@@ -134,7 +134,7 @@ function main() {
   }
 
   console.log(
-    `✅ Found ${newKumoChangesets.length} NEW changeset(s) for @cloudflare/kumo:`,
+    `✅ Found ${newKumoChangesets.length} NEW changeset(s) for @qw/design-system:`,
   );
   newKumoChangesets.forEach((cs) => {
     console.log(`   - ${cs.name}`);
@@ -157,8 +157,8 @@ function checkForKumoChanges(): boolean {
 }
 
 function getNewlyAddedChangesets(): ChangesetFile[] {
-  // Determine working directory (handle both repo root and packages/kumo contexts)
-  const cwd = process.cwd().includes("packages/kumo") ? "../.." : ".";
+  // Determine working directory (handle both repo root and packages/qw contexts)
+  const cwd = process.cwd().includes("packages/qw") ? "../.." : ".";
 
   // Get newly added files in .changeset directory
   const newFiles = getNewlyAddedFiles(CHANGESET_DIR, { cwd });
@@ -189,7 +189,7 @@ function getNewlyAddedChangesets(): ChangesetFile[] {
 
     try {
       // Resolve file path relative to repo root
-      const repoRoot = process.cwd().includes("packages/kumo") ? "../.." : ".";
+      const repoRoot = process.cwd().includes("packages/qw") ? "../.." : ".";
       const fullFilePath = join(repoRoot, filePath);
       const content = readFileSync(fullFilePath, "utf8");
       const packages = parseChangesetPackages(content);

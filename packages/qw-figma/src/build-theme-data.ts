@@ -6,15 +6,15 @@
  * This eliminates hardcoded numeric values in the Figma plugin.
  *
  * Sources:
- *   - packages/kumo/src/styles/theme-kumo.css (Kumo overrides)
+ *   - packages/qw/src/styles/theme-kumo.css (Kumo overrides)
  *   - node_modules/tailwindcss/theme.css (Tailwind v4 defaults)
- *   - packages/kumo/src/components/button/button.tsx (compactSize)
+ *   - packages/qw/src/components/button/button.tsx (compactSize)
  *
  * Output:
- *   packages/kumo-figma/src/generated/theme-data.json
+ *   packages/qw-figma/src/generated/theme-data.json
  *
  * Usage:
- *   pnpm run build:data (from packages/kumo-figma)
+ *   pnpm run build:data (from packages/qw-figma)
  */
 
 import { writeFileSync, readFileSync, mkdirSync, readdirSync } from "node:fs";
@@ -25,7 +25,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Paths - reference sibling kumo package
-const KUMO_PKG = join(__dirname, "../../kumo");
+const KUMO_PKG = join(__dirname, "../../qw");
 const KUMO_THEME_CSS = join(KUMO_PKG, "src/styles/theme-kumo.css");
 const BUTTON_TSX = join(KUMO_PKG, "src/components/button/button.tsx");
 
@@ -431,9 +431,9 @@ const spacingScale = generateSpacingScale(tailwindSpacing.baseUnitPx);
 const themeData = {
   _generated: new Date().toISOString(),
   _sources: [
-    "packages/kumo/src/styles/theme-kumo.css",
+    "packages/qw/src/styles/theme-kumo.css",
     "node_modules/tailwindcss/theme.css",
-    "packages/kumo/src/components/button/button.tsx",
+    "packages/qw/src/components/button/button.tsx",
   ],
 
   // Tailwind v4 base values

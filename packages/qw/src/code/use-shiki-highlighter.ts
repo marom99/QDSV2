@@ -13,7 +13,7 @@ import type { UseShikiHighlighterResult, SupportedLanguage } from "./types";
  *
  * @example
  * ```tsx
- * import { useShikiHighlighter } from "@cloudflare/kumo/code";
+ * import { useShikiHighlighter } from "@qw/design-system/code";
  *
  * function CustomCodeBlock({ code, lang }) {
  *   const { highlight, isLoading, isReady, error } = useShikiHighlighter();
@@ -43,7 +43,7 @@ export function useShikiHighlighter(): UseShikiHighlighterResult {
   if (!context) {
     throw new Error(
       "useShikiHighlighter must be used within a ShikiProvider. " +
-        "Wrap your app with <ShikiProvider> from '@cloudflare/kumo/code'.",
+        "Wrap your app with <ShikiProvider> from '@qw/design-system/code'.",
     );
   }
 

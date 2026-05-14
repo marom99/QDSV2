@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { NavigationMenu } from '@cloudflare/kumo/primitives/navigation-menu';
+ * import { NavigationMenu } from '@qw/design-system/primitives/navigation-menu';
  * ```
  */
 

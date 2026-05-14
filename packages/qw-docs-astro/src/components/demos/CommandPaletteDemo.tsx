@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CommandPalette, Button } from "@cloudflare/kumo";
+import { CommandPalette, Button } from "@qw/design-system";
 import {
   GearIcon,
   FileIcon,

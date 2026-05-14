@@ -43,7 +43,7 @@ const BUNDLED_LANGS: Record<
  *
  * @example
  * ```tsx
- * import { ShikiProvider, CodeHighlighted } from "@cloudflare/kumo/code";
+ * import { ShikiProvider, CodeHighlighted } from "@qw/design-system/code";
  *
  * function App() {
  *   return (

@@ -13,7 +13,7 @@
  * The CommandPalette is a compound component used for search/command interfaces.
  * Since it doesn't have traditional variants, we show the full structure.
  *
- * @see packages/kumo/src/components/command-palette/command-palette.tsx
+ * @see packages/qw/src/components/command-palette/command-palette.tsx
  */
 
 import {

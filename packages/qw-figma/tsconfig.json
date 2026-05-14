@@ -12,7 +12,7 @@
     "types": ["@figma/plugin-typings", "node"],
     "baseUrl": ".",
     "paths": {
-      "@cloudflare/kumo/*": ["../kumo/*"]
+      "@qw/design-system/*": ["../qw/*"]
     }
   },
   "include": ["src/**/*.ts"],

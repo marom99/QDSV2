@@ -12,7 +12,7 @@
  * The InputArea is a multi-line textarea with optional label, description, and error states.
  * InputArea uses Input's inputVariants, so we read from the Input component registry.
  *
- * @see packages/kumo/src/components/input/input-area.tsx
+ * @see packages/qw/src/components/input/input-area.tsx
  */
 
 import {
@@ -36,7 +36,7 @@ import {
 } from "./shared";
 import themeData from "../generated/theme-data.json";
 import { logComplete } from "../logger";
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 /**
  * Extract Input component from registry (InputArea uses Input's inputVariants)

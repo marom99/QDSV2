@@ -1,5 +1,5 @@
-import { PageHeader } from "../kumo/page-header/page-header";
-import { Breadcrumbs, Button } from "@cloudflare/kumo";
+import { PageHeader } from "../qw/page-header/page-header";
+import { Breadcrumbs, Button } from "@qw/design-system";
 import {
   HouseIcon,
   GearIcon,

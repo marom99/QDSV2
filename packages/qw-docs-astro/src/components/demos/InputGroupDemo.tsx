@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { InputGroup, Loader } from "@cloudflare/kumo";
+import { InputGroup, Loader } from "@qw/design-system";
 import {
   MagnifyingGlassIcon,
   CheckCircleIcon,

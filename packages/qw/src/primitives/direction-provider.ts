@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { DirectionProvider } from '@cloudflare/kumo/primitives/direction-provider';
+ * import { DirectionProvider } from '@qw/design-system/primitives/direction-provider';
  * ```
  */
 

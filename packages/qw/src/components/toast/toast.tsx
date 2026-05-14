@@ -152,7 +152,7 @@ export function toastVariants({
  * @example Dispatching toasts from non-React-component code
  * ```tsx
  * // 1. Create a manager at module scope
- * import { createKumoToastManager } from "@cloudflare/kumo";
+ * import { createKumoToastManager } from "@qw/design-system";
  * export const appToastManager = createKumoToastManager();
  *
  * // 2. Pass it to <Toasty>

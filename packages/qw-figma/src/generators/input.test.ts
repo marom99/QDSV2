@@ -32,7 +32,7 @@ import {
 } from "./_test-utils";
 
 // Import registry as source of truth
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 const inputComponent = registry.components.Input as any;
 const inputProps = inputComponent.props;

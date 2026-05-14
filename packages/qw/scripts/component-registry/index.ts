@@ -94,7 +94,7 @@ interface DemoMetadata {
 function loadDemoExamples(): Map<string, { aiExamples: string[] }> {
   const demoMetadataPath = join(
     __dirname,
-    "../../../kumo-docs-astro/dist/demo-metadata.json",
+    "../../../qw-docs-astro/dist/demo-metadata.json",
   );
 
   if (!existsSync(demoMetadataPath)) {
@@ -102,7 +102,7 @@ function loadDemoExamples(): Map<string, { aiExamples: string[] }> {
       `Warning: demo-metadata.json not found at ${demoMetadataPath}`,
     );
     console.warn(
-      "Run 'pnpm --filter @cloudflare/kumo-docs-astro codegen:demos' first",
+      "Run 'pnpm --filter @qw/design-system-docs-astro codegen:demos' first",
     );
     return new Map();
   }
@@ -676,7 +676,7 @@ async function processComponent(
     name: config.name,
     type: config.type,
     description: config.description,
-    importPath: "@cloudflare/kumo",
+    importPath: "@qw/design-system",
     category: config.category,
     props,
     examples,
@@ -846,7 +846,7 @@ async function generateRegistry(): Promise<GenerateRegistryResult> {
       type: "component",
       description:
         "Multi-line textarea input with Input variants and InputArea-specific dimensions",
-      importPath: "@cloudflare/kumo (synthetic - uses Input component)",
+      importPath: "@qw/design-system (synthetic - uses Input component)",
       category: "Input",
       props: {}, // Uses Input's props
       styling: COMPONENT_STYLING_METADATA.InputArea,

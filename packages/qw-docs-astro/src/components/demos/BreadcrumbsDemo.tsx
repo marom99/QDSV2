@@ -1,4 +1,4 @@
-import { Breadcrumbs } from "@cloudflare/kumo";
+import { Breadcrumbs } from "@qw/design-system";
 import { House } from "@phosphor-icons/react";
 
 export function BreadcrumbsDemo() {

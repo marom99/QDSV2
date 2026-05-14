@@ -11,7 +11,7 @@ export interface GitRefs {
 }
 
 export interface ChangedFilesOptions {
-  /** Base directory to filter files by (e.g., 'packages/kumo') */
+  /** Base directory to filter files by (e.g., 'packages/qw') */
   filterPath?: string;
   /** Working directory for git commands */
   cwd?: string;

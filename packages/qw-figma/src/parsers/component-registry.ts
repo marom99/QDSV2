@@ -5,13 +5,13 @@
  * Provides types and utilities for accessing component metadata.
  */
 
-// Import shared types from @cloudflare/kumo
+// Import shared types from @qw/design-system
 import type {
   ComponentRegistry,
   ComponentSchema,
   PropSchema,
   SubComponentSchema,
-} from "@cloudflare/kumo";
+} from "@qw/design-system";
 
 // Re-export with aliases for backwards compatibility
 export type { ComponentRegistry };

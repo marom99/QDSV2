@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { Field } from '@cloudflare/kumo/primitives/field';
+ * import { Field } from '@qw/design-system/primitives/field';
  * ```
  */
 

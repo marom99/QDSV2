@@ -24,7 +24,7 @@ import {
 } from "./link-button";
 
 // Import registry as source of truth
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 // LinkButton uses Button's props
 const buttonComponent = registry.components.Button;

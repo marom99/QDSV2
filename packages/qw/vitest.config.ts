@@ -9,7 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),
-      "@cloudflare/kumo": resolve(__dirname, "src/index.ts"),
+      "@qw/design-system": resolve(__dirname, "src/index.ts"),
     },
   },
   test: {
@@ -25,7 +25,7 @@ export default defineConfig({
         resolve: {
           alias: {
             "@": resolve(__dirname, "src"),
-            "@cloudflare/kumo": resolve(__dirname, "src/index.ts"),
+            "@qw/design-system": resolve(__dirname, "src/index.ts"),
           },
         },
         test: {

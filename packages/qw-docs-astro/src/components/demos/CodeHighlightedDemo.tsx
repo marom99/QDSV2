@@ -1,4 +1,4 @@
-import { ShikiProvider, CodeHighlighted } from "@cloudflare/kumo/code";
+import { ShikiProvider, CodeHighlighted } from "@qw/design-system/code";
 import { useState } from "react";
 import type { ReactNode } from "react";
 
@@ -87,10 +87,10 @@ export function CodeHighlightedBashDemo() {
     <DemoProvider>
       <CodeHighlighted
         code={`# Install Kumo
-npm install @cloudflare/kumo
+npm install @qw/design-system
 
 # Or with pnpm
-pnpm add @cloudflare/kumo
+pnpm add @qw/design-system
 
 # Start development server
 pnpm dev`}
@@ -106,7 +106,7 @@ export function CodeHighlightedJsonDemo() {
     <DemoProvider>
       <CodeHighlighted
         code={`{
-  "name": "@cloudflare/kumo",
+  "name": "@qw/design-system",
   "version": "1.9.0",
   "dependencies": {
     "react": "^19.0.0",
@@ -178,7 +178,7 @@ export function CodeHighlightedCopyButtonDemo() {
   return (
     <DemoProvider>
       <CodeHighlighted
-        code={`npm install @cloudflare/kumo`}
+        code={`npm install @qw/design-system`}
         lang="bash"
         showCopyButton
       />
@@ -191,7 +191,7 @@ export function CodeHighlightedFullFeaturedDemo() {
   return (
     <DemoProvider>
       <CodeHighlighted
-        code={`import { ShikiProvider, CodeHighlighted } from "@cloudflare/kumo/code";
+        code={`import { ShikiProvider, CodeHighlighted } from "@qw/design-system/code";
 
 export function CodeExample({ code, language }: Props) {
   return (

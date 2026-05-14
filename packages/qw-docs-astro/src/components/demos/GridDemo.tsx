@@ -1,4 +1,4 @@
-import { Grid, GridItem, Surface, Text } from "@cloudflare/kumo";
+import { Grid, GridItem, Surface, Text } from "@qw/design-system";
 
 export function GridDemo() {
   return (

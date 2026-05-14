@@ -1,4 +1,4 @@
-import { ClipboardText } from "@cloudflare/kumo";
+import { ClipboardText } from "@qw/design-system";
 
 export function ClipboardTextBasicDemo() {
   return <ClipboardText text="0c239dd2" />;

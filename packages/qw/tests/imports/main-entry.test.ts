@@ -10,13 +10,13 @@ describe("Main Entry Point Imports", () => {
 
   it("should import the main module without errors", async () => {
     expect(async () => {
-      await import("@cloudflare/kumo");
+      await import("@qw/design-system");
     }).not.toThrow();
   });
 
   describe("Component exports", () => {
     it("should export all discovered exports from main entry point", async () => {
-      const module = (await import("@cloudflare/kumo")) as Record<
+      const module = (await import("@qw/design-system")) as Record<
         string,
         unknown
       >;
@@ -29,7 +29,7 @@ describe("Main Entry Point Imports", () => {
   });
 
   it("should have all expected exports", async () => {
-    const module = await import("@cloudflare/kumo");
+    const module = await import("@qw/design-system");
     const actualExports = Object.keys(module)
       .filter((key) => key !== "default")
       .sort();

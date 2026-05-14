@@ -42,7 +42,7 @@ function main() {
   if (!process.env.FIGMA_TOKEN) {
     console.log(
       "Skipping figma:sync (no FIGMA_TOKEN). " +
-        "Create packages/kumo-figma/scripts/.env or export FIGMA_TOKEN to enable token sync.",
+        "Create packages/qw-figma/scripts/.env or export FIGMA_TOKEN to enable token sync.",
     );
     return;
   }

@@ -13,7 +13,7 @@ import {
   getBreadcrumbsSeparatorConfig,
   getAllBreadcrumbsData,
 } from "./breadcrumbs";
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 describe("Breadcrumbs Generator - Registry Validation", () => {
   it("should exist in registry", () => {

@@ -10,8 +10,8 @@
  * - Inactive tabs show muted text
  * - Active tab has dark text
  *
- * @see packages/kumo/src/components/tabs/tabs.tsx
- * @see packages/kumo/src/components/tabs/tabs.stories.tsx
+ * @see packages/qw/src/components/tabs/tabs.tsx
+ * @see packages/qw/src/components/tabs/tabs.stories.tsx
  */
 
 import {
@@ -32,7 +32,7 @@ import {
   VAR_NAMES,
 } from "./shared";
 import { logComplete, logStart, logProgress } from "../logger";
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 import themeData from "../generated/theme-data.json";
 
 // Type for registry styling

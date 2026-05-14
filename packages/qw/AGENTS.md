@@ -1,4 +1,4 @@
-# Component Library (`@cloudflare/kumo`)
+# Component Library (`@qw/design-system`)
 
 React component library: Base UI + Tailwind v4 + Vite library mode. ESM-only, tree-shakeable per-component exports.
 
@@ -81,7 +81,7 @@ Output: ai/component-registry.{json,md} + ai/schemas.ts
 ### Testing
 
 - **Vitest** with `happy-dom`, globals enabled
-- **Path aliases**: `@/` → `src/`, `@cloudflare/kumo` → `src/index.ts`
+- **Path aliases**: `@/` → `src/`, `@qw/design-system` → `src/index.ts`
 - **Structural tests** in `tests/imports/`: validate all export paths resolve, package.json matches vite entries
 - **Component tests**: ~14 components have unit tests (`*.test.tsx`), plus 2 browser tests (`*.browser.test.tsx`). Coverage is growing but not comprehensive across all 39 components
 - **`describe.skipIf(!isBuilt)`**: Export validation tests skip gracefully when `dist/` missing
@@ -123,5 +123,5 @@ Output: ai/component-registry.{json,md} + ai/schemas.ts
 - **Catalog `initCatalog`**: Appears to have race condition with async schema loading
 - **CLI path inconsistency**: `ls`/`doc` read from `catalog/`, `blocks` from `ai/` directory
 - **`PLOP_INJECT_EXPORT`** in `src/index.ts` and `PLOP_INJECT_COMPONENT_ENTRY` in `vite.config.ts` are scaffolding markers
-- **5th lint rule** (`no-deprecated-props`): Only in `packages/kumo/lint/`, reads deprecation data from registry
+- **5th lint rule** (`no-deprecated-props`): Only in `packages/qw/lint/`, reads deprecation data from registry
 - **LinkProvider**: Framework-agnostic link abstraction; wrap app with custom Link component (e.g., Next.js)

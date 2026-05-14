@@ -28,8 +28,8 @@ jobs:
       - name: Install Dependencies
         uses: ./.github/actions/install-dependencies
 
-      - name: Build @cloudflare/kumo
-        run: pnpm --filter @cloudflare/kumo build
+      - name: Build @qw/design-system
+        run: pnpm --filter @qw/design-system build
 
       # changesets/action either:
       # 1. Creates/updates a "Version Packages" PR (when changesets exist)
@@ -51,4 +51,4 @@ jobs:
       # (GITHUB_TOKEN PRs don't trigger workflows, so we do it here)
       - name: Publish package preview
         if: ${{ steps.changesets.outputs.pullRequestNumber }}
-        run: pnpm dlx pkg-pr-new publish --pnpm --compact --no-template ./packages/kumo
+        run: pnpm dlx pkg-pr-new publish --pnpm --compact --no-template ./packages/qw

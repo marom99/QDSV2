@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CaretUpDownIcon } from "@phosphor-icons/react";
-import { Combobox, Text, Button } from "@cloudflare/kumo";
+import { Combobox, Text, Button } from "@qw/design-system";
 
 // Basic fruits list for simple demos (expanded to test scrolling)
 const fruits = [

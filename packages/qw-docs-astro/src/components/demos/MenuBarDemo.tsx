@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MenuBar } from "@cloudflare/kumo";
+import { MenuBar } from "@qw/design-system";
 import { TextBolderIcon, TextItalicIcon } from "@phosphor-icons/react";
 
 export function MenuBarBasicDemo() {

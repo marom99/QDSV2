@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { Combobox } from '@cloudflare/kumo/primitives/combobox';
+ * import { Combobox } from '@qw/design-system/primitives/combobox';
  * ```
  */
 

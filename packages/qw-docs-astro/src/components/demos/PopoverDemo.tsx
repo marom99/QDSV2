@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Popover, Button } from "@cloudflare/kumo";
+import { Popover, Button } from "@qw/design-system";
 import { BellIcon, DotsThree } from "@phosphor-icons/react";
 
 export function PopoverHeroDemo() {

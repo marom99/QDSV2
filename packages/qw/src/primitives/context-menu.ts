@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { ContextMenu } from '@cloudflare/kumo/primitives/context-menu';
+ * import { ContextMenu } from '@qw/design-system/primitives/context-menu';
  * ```
  */
 

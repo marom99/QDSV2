@@ -1,4 +1,4 @@
-import { SkeletonLine } from "@cloudflare/kumo";
+import { SkeletonLine } from "@qw/design-system";
 import type { ReactNode } from "react";
 
 export function SkeletonLineDemo() {

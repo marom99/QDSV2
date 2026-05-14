@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { TableOfContents as TOC } from "@cloudflare/kumo";
+import { TableOfContents as TOC } from "@qw/design-system";
 import { CaretDownIcon } from "@phosphor-icons/react";
 
 export interface TocHeading {

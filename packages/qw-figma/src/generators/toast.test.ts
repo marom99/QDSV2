@@ -22,7 +22,7 @@ import {
 } from "./toast";
 
 // Import registry as source of truth
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 const toastComponent = (registry.components as any).Toasty;
 const toastStyling = toastComponent.styling;

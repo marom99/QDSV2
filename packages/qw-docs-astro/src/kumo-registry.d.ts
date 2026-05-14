@@ -3,7 +3,7 @@
  * Provides component registry data from the AI metadata.
  */
 declare module "virtual:kumo-registry" {
-  import type { ComponentRegistry } from "@cloudflare/kumo";
+  import type { ComponentRegistry } from "@qw/design-system";
 
   /** Component registry markdown content for documentation */
   export const kumoRegistryMarkdown: string;

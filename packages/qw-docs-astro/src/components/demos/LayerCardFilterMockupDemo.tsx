@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Badge, Input, LayerCard, Tabs } from "@cloudflare/kumo";
+import { Badge, Input, LayerCard, Tabs } from "@qw/design-system";
 
 // ─── Data ────────────────────────────────────────────────────────────
 

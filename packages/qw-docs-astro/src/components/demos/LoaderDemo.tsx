@@ -1,4 +1,4 @@
-import { Loader } from "@cloudflare/kumo";
+import { Loader } from "@qw/design-system";
 
 export function LoaderBasicDemo() {
   return <Loader />;

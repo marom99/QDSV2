@@ -10,7 +10,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const packageRoot = join(__dirname, "../.."); // src/command-line -> packages/kumo
+const packageRoot = join(__dirname, "../.."); // src/command-line -> packages/qw
 const distCliDir = join(packageRoot, "dist", "command-line");
 
 // Ensure dist/command-line directory exists

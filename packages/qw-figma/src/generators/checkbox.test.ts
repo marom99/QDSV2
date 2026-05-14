@@ -42,7 +42,7 @@ import {
 } from "./_test-utils";
 
 // Import registry as source of truth
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 const checkboxComponent = registry.components.Checkbox;
 const checkboxProps = checkboxComponent.props;

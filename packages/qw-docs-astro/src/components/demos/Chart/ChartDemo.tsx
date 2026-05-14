@@ -4,7 +4,7 @@ import {
   Chart,
   ChartLegend,
   LayerCard,
-} from "@cloudflare/kumo";
+} from "@qw/design-system";
 import * as echarts from "echarts/core";
 import type { EChartsOption } from "echarts";
 import { BarChart, LineChart, PieChart } from "echarts/charts";

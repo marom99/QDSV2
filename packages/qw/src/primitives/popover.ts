@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { Popover } from '@cloudflare/kumo/primitives/popover';
+ * import { Popover } from '@qw/design-system/primitives/popover';
  * ```
  */
 

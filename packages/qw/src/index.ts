@@ -1,5 +1,5 @@
 /**
- * @module @cloudflare/kumo
+ * @module @qw/design-system
  *
  * Cloudflare's React component library built on Base UI and Tailwind CSS v4.
  *
@@ -7,7 +7,7 @@
  * - Use **semantic tokens only** (`bg-kumo-base`, `text-kumo-default`, etc.) — never raw Tailwind colors.
  * - **No `dark:` variant** — light/dark mode is handled automatically via CSS `light-dark()`.
  * - Merge custom classes with the `cn()` utility exported from this package.
- * - Wrap your app with the kumo CSS import: `import "@cloudflare/kumo/styles"`.
+ * - Wrap your app with the kumo CSS import: `import "@qw/design-system/styles"`.
  *
  * **Component categories:**
  * - **Action:** Button, ClipboardText
@@ -20,9 +20,9 @@
  * - **Other:** Label, Link
  *
  * **Blocks** (composite page-level components) are NOT exported here.
- * Install them via the CLI: `npx @cloudflare/kumo add <block-name>`.
+ * Install them via the CLI: `npx @qw/design-system add <block-name>`.
  *
- * **AI resources:** See `@cloudflare/kumo/ai/component-registry.json` for full
+ * **AI resources:** See `@qw/design-system/ai/component-registry.json` for full
  * component metadata including prop descriptions, variant values, and examples.
  *
  * @see {@link https://kumo-ui.com} — Documentation site

@@ -20,7 +20,7 @@ import {
 } from "./tabs";
 
 // Import registry as source of truth
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 const tabsComponent = registry.components.Tabs as any;
 const tabsStyling = tabsComponent.styling;

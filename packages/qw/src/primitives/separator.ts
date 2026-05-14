@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { Separator } from '@cloudflare/kumo/primitives/separator';
+ * import { Separator } from '@qw/design-system/primitives/separator';
  * ```
  */
 

@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { cn } from "@cloudflare/kumo";
+import { cn } from "@qw/design-system";
 
 export interface ResourceListPageProps {
   title?: string;

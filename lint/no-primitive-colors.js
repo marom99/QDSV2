@@ -120,8 +120,8 @@ const NON_COLOR_PATTERNS = [
 // This ensures the allowlist stays in sync with the theme files.
 function parseKumoSemanticColors() {
   const themeFiles = [
-    resolve(__dirname, "../packages/kumo/src/styles/theme-kumo.css"),
-    resolve(__dirname, "../packages/kumo/src/styles/theme-fedramp.css"),
+    resolve(__dirname, "../packages/qw/src/styles/theme-kumo.css"),
+    resolve(__dirname, "../packages/qw/src/styles/theme-fedramp.css"),
   ];
 
   const colorTokens = new Set();

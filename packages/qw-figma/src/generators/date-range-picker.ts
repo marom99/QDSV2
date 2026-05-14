@@ -1,5 +1,5 @@
 import { logComplete } from "../logger";
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 /**
  * DateRangePicker Component Generator
@@ -21,7 +21,7 @@ import registry from "@cloudflare/kumo/ai/component-registry.json";
  * Reads styles from component-registry.json (the source of truth).
  * Uses real icons from the Icon Library page.
  *
- * @see packages/kumo/src/components/date-range-picker/date-range-picker.tsx
+ * @see packages/qw/src/components/date-range-picker/date-range-picker.tsx
  */
 
 import {

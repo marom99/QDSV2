@@ -3,13 +3,13 @@ import { defineRule } from "oxlint";
 const RULE_NAME = "no-cross-package-imports";
 
 // Known package directory names in this monorepo
-const PACKAGE_DIRS = new Set(["kumo", "kumo-docs-astro", "kumo-figma"]);
+const PACKAGE_DIRS = new Set(["qw", "qw-docs-astro", "qw-figma"]);
 
 // Pattern to detect relative imports that traverse up to packages/ level
 // and then into a sibling package directory.
 // This looks for paths like:
-//   ../../kumo/... (from packages/kumo-docs-astro/src/foo.ts)
-//   ../../../kumo/... (from packages/kumo-docs-astro/src/deep/foo.ts)
+//   ../../qw/... (from packages/qw-docs-astro/src/foo.ts)
+//   ../../../qw/... (from packages/qw-docs-astro/src/deep/foo.ts)
 //
 // The key insight: we need enough "../" to escape the current package's src/
 // directory and land in packages/, then go into another package.
@@ -29,7 +29,7 @@ const CROSS_PACKAGE_PATTERN = /^((?:\.\.\/)+)([a-z0-9-]+)\//;
  * 3. The number of "../" is >= 2 (minimum to escape src/ and reach packages/)
  *
  * This avoids false positives for local directories that happen to be named
- * like packages (e.g., ./kumo/ or ../kumo/ within the same package).
+ * like packages (e.g., ./kumo/ or ../qw/ within the same package).
  */
 function getCrossPackageImport(importPath) {
   if (!importPath || !importPath.startsWith("..")) {
@@ -67,11 +67,11 @@ function getCrossPackageImport(importPath) {
  * Get the source value from an import declaration or expression.
  */
 function getImportSource(node) {
-  // Static import: import x from "../kumo/foo"
+  // Static import: import x from "../qw/foo"
   if (node.source && node.source.type === "Literal") {
     return node.source.value;
   }
-  // Dynamic import: import("../kumo/foo")
+  // Dynamic import: import("../qw/foo")
   if (
     node.type === "ImportExpression" &&
     node.source &&
@@ -91,7 +91,7 @@ export const noCrossPackageImportsRule = defineRule({
     },
     messages: {
       [RULE_NAME]:
-        "Cross-package relative import detected. Import from '{{packageName}}' using its package name (e.g., '@cloudflare/{{packageName}}') instead of relative paths ('{{importPath}}').",
+        "Cross-package relative import detected. Import from '{{packageName}}' using its package name (e.g., '@qw/design-system') instead of relative paths ('{{importPath}}').",
     },
     schema: [],
   },
@@ -112,7 +112,7 @@ export const noCrossPackageImportsRule = defineRule({
     }
 
     return {
-      // Static imports: import x from "../kumo/foo"
+      // Static imports: import x from "../qw/foo"
       ImportDeclaration(node) {
         const source = getImportSource(node);
         if (source) {
@@ -120,7 +120,7 @@ export const noCrossPackageImportsRule = defineRule({
         }
       },
 
-      // Dynamic imports: import("../kumo/foo")
+      // Dynamic imports: import("../qw/foo")
       ImportExpression(node) {
         const source = getImportSource(node);
         if (source) {
@@ -128,7 +128,7 @@ export const noCrossPackageImportsRule = defineRule({
         }
       },
 
-      // require() calls: require("../kumo/foo")
+      // require() calls: require("../qw/foo")
       CallExpression(node) {
         if (
           node.callee.type === "Identifier" &&
@@ -141,7 +141,7 @@ export const noCrossPackageImportsRule = defineRule({
         }
       },
 
-      // export from: export { x } from "../kumo/foo"
+      // export from: export { x } from "../qw/foo"
       ExportNamedDeclaration(node) {
         if (node.source) {
           const source = getImportSource(node);
@@ -151,7 +151,7 @@ export const noCrossPackageImportsRule = defineRule({
         }
       },
 
-      // export * from "../kumo/foo"
+      // export * from "../qw/foo"
       ExportAllDeclaration(node) {
         const source = getImportSource(node);
         if (source) {

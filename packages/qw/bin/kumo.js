@@ -28,7 +28,7 @@ async function main() {
   }
 
   console.error(
-    "Kumo CLI entrypoint not found. If you're in the repo, run: pnpm --filter @cloudflare/kumo build",
+    "Kumo CLI entrypoint not found. If you're in the repo, run: pnpm --filter @qw/design-system build",
   );
   process.exit(1);
 }

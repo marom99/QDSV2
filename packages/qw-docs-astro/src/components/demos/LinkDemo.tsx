@@ -1,4 +1,4 @@
-import { Link } from "@cloudflare/kumo";
+import { Link } from "@qw/design-system";
 
 export function LinkBasicDemo() {
   return (

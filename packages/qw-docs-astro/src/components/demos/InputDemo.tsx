@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Input } from "@cloudflare/kumo";
+import { Input } from "@qw/design-system";
 
 export function InputBasicDemo() {
   return (

@@ -10,7 +10,7 @@
  *
  * LayerCard has no variants - it's a single compound component style.
  *
- * @see packages/kumo/src/components/layer-card/layer-card.tsx
+ * @see packages/qw/src/components/layer-card/layer-card.tsx
  */
 
 import {
@@ -32,7 +32,7 @@ import {
   VAR_NAMES,
 } from "./shared";
 import { createIconInstance, bindIconColor, DEFAULT_ICONS } from "./icon-utils";
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 import themeData from "../generated/theme-data.json";
 
 // Read LayerCard styling from registry

@@ -153,17 +153,17 @@ export interface CodeProps extends KumoCodeVariantsProps {
  * - No borders or padding (use CodeBlock for styled container)
  * - Supports all semantic tokens via className prop
  *
- * @deprecated Use `CodeHighlighted` from `@cloudflare/kumo/code` for syntax highlighting.
+ * @deprecated Use `CodeHighlighted` from `@qw/design-system/code` for syntax highlighting.
  * This component will be removed in v2.0.
  *
  * @example Migration:
  * ```tsx
  * // Before
- * import { Code } from "@cloudflare/kumo";
+ * import { Code } from "@qw/design-system";
  * <Code code="const x = 1;" lang="ts" />
  *
  * // After
- * import { ShikiProvider, CodeHighlighted } from "@cloudflare/kumo/code";
+ * import { ShikiProvider, CodeHighlighted } from "@qw/design-system/code";
  * <ShikiProvider engine="javascript" languages={['tsx']} themes={{ light: 'github-light', dark: 'github-dark' }}>
  *   <CodeHighlighted code="const x = 1;" lang="tsx" />
  * </ShikiProvider>
@@ -213,7 +213,7 @@ export interface CodeBlockProps {
  * - Inner padding: `p-2.5` (10px)
  * - Uses semantic tokens: `bg-kumo-base`, `border-kumo-fill`
  *
- * @deprecated Use `CodeHighlighted` from `@cloudflare/kumo/code` for syntax highlighting.
+ * @deprecated Use `CodeHighlighted` from `@qw/design-system/code` for syntax highlighting.
  * This component will be removed in v2.0.
  */
 function CodeBlockComponent({ code, lang }: CodeBlockProps) {

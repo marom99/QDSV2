@@ -4,17 +4,17 @@
 
 ## OVERVIEW
 
-Cloudflare's React component library (`@cloudflare/kumo`). pnpm monorepo: component library (Base UI + Tailwind v4), Astro docs site, Figma plugin, screenshot worker. ESM-only, Node 24+.
+Cloudflare's React component library (`@qw/design-system`). pnpm monorepo: component library (Base UI + Tailwind v4), Astro docs site, Figma plugin, screenshot worker. ESM-only, Node 24+.
 
 ## STRUCTURE
 
 ```
 kumo/
 ├── packages/
-│   ├── kumo/                     # Component library → see packages/kumo/AGENTS.md
-│   ├── kumo-docs-astro/          # Astro docs site → see packages/kumo-docs-astro/AGENTS.md
-│   ├── kumo-figma/               # Figma plugin → see packages/kumo-figma/AGENTS.md
-│   └── kumo-screenshot-worker/   # Visual regression Worker → see packages/kumo-screenshot-worker/AGENTS.md
+│   ├── kumo/                     # Component library → see packages/qw/AGENTS.md
+│   ├── kumo-docs-astro/          # Astro docs site → see packages/qw-docs-astro/AGENTS.md
+│   ├── kumo-figma/               # Figma plugin → see packages/qw-figma/AGENTS.md
+│   └── kumo-screenshot-worker/   # Visual regression Worker → see packages/qw-screenshot-worker/AGENTS.md
 ├── ci/                           # CI/CD scripts → see ci/AGENTS.md
 ├── lint/                         # Custom oxlint rules (5 rules in package, 4 at root)
 ├── .changeset/                   # Changeset files
@@ -26,14 +26,14 @@ kumo/
 
 | Task                 | Location                                         | Notes                                                    |
 | -------------------- | ------------------------------------------------ | -------------------------------------------------------- |
-| Component API        | `packages/kumo/ai/component-registry.{json,md}`  | Source of truth. Query with `jq` or CLI                  |
-| Component source     | `packages/kumo/src/components/{name}/{name}.tsx` | Standard pattern                                         |
-| Blocks (installable) | `packages/kumo/src/blocks/`                      | NOT library exports; installed via CLI                   |
-| Semantic tokens      | `packages/kumo/src/styles/theme-kumo.css`        | AUTO-GENERATED; edit `scripts/theme-generator/config.ts` |
-| Custom lint rules    | `lint/` (4 rules) + `packages/kumo/lint/` (+1)   | Package copy adds `no-deprecated-props`                  |
-| Demo examples        | `packages/kumo-docs-astro/src/components/demos/` | Feed into registry codegen                               |
+| Component API        | `packages/qw/ai/component-registry.{json,md}`  | Source of truth. Query with `jq` or CLI                  |
+| Component source     | `packages/qw/src/components/{name}/{name}.tsx` | Standard pattern                                         |
+| Blocks (installable) | `packages/qw/src/blocks/`                      | NOT library exports; installed via CLI                   |
+| Semantic tokens      | `packages/qw/src/styles/theme-kumo.css`        | AUTO-GENERATED; edit `scripts/theme-generator/config.ts` |
+| Custom lint rules    | `lint/` (4 rules) + `packages/qw/lint/` (+1)   | Package copy adds `no-deprecated-props`                  |
+| Demo examples        | `packages/qw-docs-astro/src/components/demos/` | Feed into registry codegen                               |
 | CI scripts           | `ci/`                                            | Reporter system, versioning, deployment                  |
-| Figma generators     | `packages/kumo-figma/src/generators/`            | 37 component generators                                  |
+| Figma generators     | `packages/qw-figma/src/generators/`            | 37 component generators                                  |
 
 ## CONVENTIONS
 
@@ -49,18 +49,18 @@ kumo/
 
 ### Components
 
-- **Scaffold new**: `pnpm --filter @cloudflare/kumo new:component` (never create manually)
+- **Scaffold new**: `pnpm --filter @qw/design-system new:component` (never create manually)
 - **Registry first**: Always check `component-registry.json` before using/modifying a component
-- See `packages/kumo/AGENTS.md` for component conventions (variants, forwardRef, displayName)
+- See `packages/qw/AGENTS.md` for component conventions (variants, forwardRef, displayName)
 
 ### Imports
 
-- **No cross-package relative imports**: Use `@cloudflare/kumo` not `../../kumo/src/...` (lint-enforced)
+- **No cross-package relative imports**: Use `@qw/design-system` not `../../qw/src/...` (lint-enforced)
 - **ESM-only**: `"type": "module"` throughout. No CJS.
 
 ### Changesets
 
-- **Enforced for `packages/kumo/`**: Pre-push hook requires changeset for npm-published library
+- **Enforced for `packages/qw/`**: Pre-push hook requires changeset for npm-published library
 - **Optional for `kumo-docs-astro`**: Version appears in `/api/version` endpoint (debugging) but nothing depends on it
 - **Not needed for `kumo-figma`**: Figma plugin, not published to npm
 - **Pre-push hook**: Lefthook validates before push. Bypass: `git push --no-verify`
@@ -107,10 +107,10 @@ pnpm typecheck                                    # TypeScript check all package
 pnpm changeset                                    # Create changeset (required for kumo changes)
 
 # Package-specific (see child AGENTS.md for full lists)
-pnpm --filter @cloudflare/kumo build              # Build library
-pnpm --filter @cloudflare/kumo test               # Vitest
-pnpm --filter @cloudflare/kumo codegen:registry   # Regenerate component-registry
-pnpm --filter @cloudflare/kumo-figma build        # Build Figma plugin
+pnpm --filter @qw/design-system build              # Build library
+pnpm --filter @qw/design-system test               # Vitest
+pnpm --filter @qw/design-system codegen:registry   # Regenerate component-registry
+pnpm --filter @qw/design-system-figma build        # Build Figma plugin
 ```
 
 ## BUILD PIPELINE

@@ -1,4 +1,4 @@
-# @cloudflare/kumo
+# @qw/design-system
 
 ## 2.1.0
 
@@ -441,7 +441,7 @@
 - cf6b917: Align semantic token documentation and docs presentation updates.
   - Update `colors.mdx` token documentation structure.
   - Replaced `kumo-ring` with `kumo-hairline` for border/ring colors and all its instances in kumo components and docs.
-  - Sync `packages/kumo/ai/USAGE.md` token reference categories and descriptions with the docs token guide.
+  - Sync `packages/qw/ai/USAGE.md` token reference categories and descriptions with the docs token guide.
   - Adjust the typo in the recessed dark token value in theme generator config and regenerate `theme-kumo.css`.
   - Updated `kumo-fill-hover` token value from `neutral-700` to `neutral-800`
 
@@ -801,10 +801,10 @@
 ### Minor Changes
 
 - 5505610: Add Shiki-powered `CodeHighlighted` component for syntax highlighting
-  - **New entry point**: `@cloudflare/kumo/code` - keeps Shiki out of main bundle
+  - **New entry point**: `@qw/design-system/code` - keeps Shiki out of main bundle
   - **ShikiProvider**: Lazy-loads Shiki on first render, shares instance across all children
   - **CodeHighlighted**: Syntax highlighting with line numbers, line highlighting, copy button
-  - **Server utilities**: `@cloudflare/kumo/code/server` for SSR/static highlighting
+  - **Server utilities**: `@qw/design-system/code/server` for SSR/static highlighting
   - **Themes**: Ships with `github-light` and `vesper` defaults, supports any Shiki theme
   - **i18n**: Customizable labels via provider or per-component
   - **CSS customization**: `--kumo-code-highlight-bg` variable for highlight color
@@ -861,7 +861,7 @@
   - Fix dark mode: Make `<pre>` background transparent so container's `bg-kumo-base` handles theming and border-radius is respected
   - Fix layout: Wrap Shiki output in overflow container to prevent line highlight negative margins from being clipped
   - Fix width: Add `w-full` to container for proper full-width display
-  - Fix SSR: Remove `"use client"` directive from `@cloudflare/kumo/code/server` entry point so server utilities work in RSC/SSR contexts
+  - Fix SSR: Remove `"use client"` directive from `@qw/design-system/code/server` entry point so server utilities work in RSC/SSR contexts
 
 - 31ce577: fix(CommandPalette): add explicit text-base class to Item component for consistent 14px font size
 - ee5a632: Fix Select to render description and error when hideLabel is true
@@ -1041,14 +1041,14 @@
 ### Patch Changes
 
 - c71bd9b: Updated the MenuBar so its child buttons align with the container’s outer corners.
-- 46ecf42: Fix `kumo add` to consolidate imports from `@cloudflare/kumo` into a single statement using inline `type` syntax.
+- 46ecf42: Fix `kumo add` to consolidate imports from `@qw/design-system` into a single statement using inline `type` syntax.
 
   Previously, running `kumo add DeleteResource` would produce non-conformant code with duplicate imports:
 
   ```typescript
-  import { Dialog, DialogRoot } from "@cloudflare/kumo";
-  import { Input } from "@cloudflare/kumo";
-  import { Button } from "@cloudflare/kumo";
+  import { Dialog, DialogRoot } from "@qw/design-system";
+  import { Input } from "@qw/design-system";
+  import { Button } from "@qw/design-system";
   ```
 
   Now it produces a single consolidated import:
@@ -1060,7 +1060,7 @@
     Input,
     Button,
     type DialogProps,
-  } from "@cloudflare/kumo";
+  } from "@qw/design-system";
   ```
 
   This satisfies ESLint's `import/no-duplicates` rule with `prefer-inline: true`.
@@ -1159,14 +1159,14 @@
 
   ### Blocks Distribution via CLI
 
-  Blocks (`PageHeader`, `ResourceListPage`) are no longer exported from `@cloudflare/kumo`. They must now be installed via the CLI:
+  Blocks (`PageHeader`, `ResourceListPage`) are no longer exported from `@qw/design-system`. They must now be installed via the CLI:
 
   ```bash
-  npx @cloudflare/kumo init        # Initialize kumo.json
-  npx @cloudflare/kumo add PageHeader
+  npx @qw/design-system init        # Initialize kumo.json
+  npx @qw/design-system add PageHeader
   ```
 
-  Blocks are copied to your project for full customization with imports automatically transformed to `@cloudflare/kumo`.
+  Blocks are copied to your project for full customization with imports automatically transformed to `@qw/design-system`.
 
   ### Checkbox API Changes
   - **Ref type changed**: `HTMLInputElement` → `HTMLButtonElement`
@@ -1207,11 +1207,11 @@
 
   ```bash
   # 1. Initialize configuration
-  npx @cloudflare/kumo init
+  npx @qw/design-system init
 
   # 2. Install blocks
-  npx @cloudflare/kumo add PageHeader
-  npx @cloudflare/kumo add ResourceListPage
+  npx @qw/design-system add PageHeader
+  npx @qw/design-system add ResourceListPage
 
   # 3. Update imports to the local path shown after installation
   ```
@@ -1262,7 +1262,7 @@
   - `kumo blocks` - List all available blocks for CLI installation
   - `kumo add <block-name>` - Install a block to your project with transformed imports
 
-  Blocks are copied to your project for full customization, with relative imports automatically converted to `@cloudflare/kumo`.
+  Blocks are copied to your project for full customization, with relative imports automatically converted to `@qw/design-system`.
 
 - 08c4426: Add lint rule to detect usage of deprecated props on Kumo components.
   - New `kumo/no-deprecated-props` lint rule automatically detects deprecated props from `@deprecated` JSDoc tags
@@ -1328,7 +1328,7 @@
 
 ### Minor Changes
 
-- d04c91f: Ship component registry with @cloudflare/kumo module
+- d04c91f: Ship component registry with @qw/design-system module
 - 0e246bf: feat(popover): Add new Popover component
 
   Adds a new Popover component based on Base UI's popover primitive. The Popover provides an accessible popup anchored to a trigger element, with support for:
@@ -1480,13 +1480,13 @@
   pnpm install
 
   # Regenerate primitive files with new package references
-  pnpm --filter @cloudflare/kumo build:primitives
+  pnpm --filter @qw/design-system build:primitives
 
   # Rebuild the package
-  pnpm --filter @cloudflare/kumo build
+  pnpm --filter @qw/design-system build
 
   # Run tests to verify everything works
-  pnpm --filter @cloudflare/kumo test:run
+  pnpm --filter @qw/design-system test:run
   ```
 
   ## Technical Details
@@ -1567,11 +1567,11 @@
 
   ```tsx
   // Barrel export (imports all primitives)
-  import { Slider, Popover, Tooltip } from "@cloudflare/kumo/primitives";
+  import { Slider, Popover, Tooltip } from "@qw/design-system/primitives";
 
   // Granular exports (tree-shakeable, recommended)
-  import { Slider } from "@cloudflare/kumo/primitives/slider";
-  import { Popover } from "@cloudflare/kumo/primitives/popover";
+  import { Slider } from "@qw/design-system/primitives/slider";
+  import { Popover } from "@qw/design-system/primitives/popover";
   ```
 
   **Available primitives:** accordion, alert-dialog, autocomplete, avatar, button, checkbox, checkbox-group, collapsible, combobox, context-menu, dialog, direction-provider, field, fieldset, form, input, menu, menubar, meter, navigation-menu, number-field, popover, preview-card, progress, radio, radio-group, scroll-area, select, separator, slider, switch, tabs, toast, toggle, toggle-group, toolbar, tooltip.

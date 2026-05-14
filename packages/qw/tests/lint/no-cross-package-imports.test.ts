@@ -3,7 +3,7 @@ import { describe, it, expect } from "vitest";
 // Test the detection logic directly by importing and testing the pattern matching
 // Note: We can't easily test oxlint rules in isolation, so we test the core logic
 
-const PACKAGE_DIRS = new Set(["kumo", "kumo-docs-astro", "kumo-figma"]);
+const PACKAGE_DIRS = new Set(["qw", "qw-docs-astro", "qw-figma"]);
 const CROSS_PACKAGE_PATTERN = /^((?:\.\.\/)+)([a-z0-9-]+)\//;
 
 function getCrossPackageImport(importPath: string): string | null {
@@ -34,34 +34,34 @@ function getCrossPackageImport(importPath: string): string | null {
 
 describe("no-cross-package-imports", () => {
   describe("should detect cross-package imports", () => {
-    it("detects ../../kumo/path", () => {
-      expect(getCrossPackageImport("../../kumo/src/button")).toBe("kumo");
+    it("detects ../../qw/path", () => {
+      expect(getCrossPackageImport("../../qw/src/button")).toBe("qw");
     });
 
-    it("detects ../../../kumo/path (deeper nesting)", () => {
-      expect(getCrossPackageImport("../../../kumo/src/button")).toBe("kumo");
+    it("detects ../../../qw/path (deeper nesting)", () => {
+      expect(getCrossPackageImport("../../../qw/src/button")).toBe("qw");
     });
 
-    it("detects ../../kumo-docs-astro/path", () => {
-      expect(getCrossPackageImport("../../kumo-docs-astro/src/foo")).toBe(
-        "kumo-docs-astro",
+    it("detects ../../qw-docs-astro/path", () => {
+      expect(getCrossPackageImport("../../qw-docs-astro/src/foo")).toBe(
+        "qw-docs-astro",
       );
     });
 
-    it("detects ../../kumo-figma/path", () => {
-      expect(getCrossPackageImport("../../kumo-figma/src/bar")).toBe(
-        "kumo-figma",
+    it("detects ../../qw-figma/path", () => {
+      expect(getCrossPackageImport("../../qw-figma/src/bar")).toBe(
+        "qw-figma",
       );
     });
   });
 
   describe("should NOT detect local imports", () => {
-    it("ignores ../kumo/path (single level up)", () => {
-      expect(getCrossPackageImport("../kumo/button")).toBeNull();
+    it("ignores ../qw/path (single level up)", () => {
+      expect(getCrossPackageImport("../qw/button")).toBeNull();
     });
 
     it("ignores ./kumo/path (same directory)", () => {
-      expect(getCrossPackageImport("./kumo/button")).toBeNull();
+      expect(getCrossPackageImport("./qw/button")).toBeNull();
     });
 
     it("ignores ../components/button (not a package dir)", () => {
@@ -81,7 +81,7 @@ describe("no-cross-package-imports", () => {
     });
 
     it("ignores package imports", () => {
-      expect(getCrossPackageImport("@cloudflare/kumo")).toBeNull();
+      expect(getCrossPackageImport("@qw/design-system")).toBeNull();
     });
 
     it("ignores node_modules imports", () => {
@@ -100,7 +100,7 @@ describe("no-cross-package-imports", () => {
 
     it("handles path ending at package dir (no subpath)", () => {
       // This matches but kumo/ needs something after it
-      expect(getCrossPackageImport("../../kumo/")).toBe("kumo");
+      expect(getCrossPackageImport("../../qw/")).toBe("qw");
     });
   });
 });

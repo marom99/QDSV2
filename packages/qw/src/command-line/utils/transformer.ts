@@ -37,7 +37,7 @@ function parseImports(content: string): ParsedImport[] {
 }
 
 /**
- * Checks if an import path should be transformed to @cloudflare/kumo
+ * Checks if an import path should be transformed to @qw/design-system
  */
 function shouldTransformToKumo(path: string): boolean {
   if (!path.startsWith("../")) {
@@ -94,20 +94,20 @@ function buildConsolidatedImport(
     parts.push(`type ${item}`);
   }
 
-  return `import { ${parts.join(", ")} } from "@cloudflare/kumo";`;
+  return `import { ${parts.join(", ")} } from "@qw/design-system";`;
 }
 
 /**
  * Transforms relative imports in block source code to package imports
  *
- * This function consolidates all imports from @cloudflare/kumo into a single
+ * This function consolidates all imports from @qw/design-system into a single
  * import statement using inline `type` syntax to satisfy ESLint's
  * import/no-duplicates rule with prefer-inline: true.
  *
  * Examples:
  * - Multiple component imports → single consolidated import
- * - `../../components/tabs` + `../../utils/cn` → `import { Tabs, cn } from "@cloudflare/kumo";`
- * - Mixed value/type imports → `import { Button, type ButtonProps } from "@cloudflare/kumo";`
+ * - `../../components/tabs` + `../../utils/cn` → `import { Tabs, cn } from "@qw/design-system";`
+ * - Mixed value/type imports → `import { Button, type ButtonProps } from "@qw/design-system";`
  *
  * @param content - The source code content to transform
  * @returns Transformed source code with consolidated package imports

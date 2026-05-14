@@ -14,7 +14,7 @@
  * Reads styles from component-registry.json (the source of truth).
  * Uses real icons from the Icon Library page.
  *
- * @see packages/kumo/src/components/dialog/dialog.tsx
+ * @see packages/qw/src/components/dialog/dialog.tsx
  */
 
 import {
@@ -38,7 +38,7 @@ import {
   VAR_NAMES,
 } from "./shared";
 import { getButtonIcon, bindIconColor } from "./icon-utils";
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 import { logComplete } from "../logger";
 import { parseTailwindClasses } from "../parsers/tailwind-to-figma";
 import themeData from "../generated/theme-data.json";

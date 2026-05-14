@@ -1,4 +1,4 @@
-import { Text } from "@cloudflare/kumo";
+import { Text } from "@qw/design-system";
 
 export function TextVariantsDemo() {
   return (

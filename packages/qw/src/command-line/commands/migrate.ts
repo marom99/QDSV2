@@ -82,7 +82,7 @@ When Kumo releases breaking changes to token names, use this command
 to get the rename map for updating your codebase.
 
 USAGE:
-  npx @cloudflare/kumo migrate [options]
+  npx @qw/design-system migrate [options]
 
 OPTIONS:
   --json         Output machine-readable JSON (default)
@@ -92,16 +92,16 @@ OPTIONS:
 
 EXAMPLES:
   # Check if there are pending migrations
-  npx @cloudflare/kumo migrate
+  npx @qw/design-system migrate
 
   # Get class-level mapping for sed/find-replace
-  npx @cloudflare/kumo migrate --classes
+  npx @qw/design-system migrate --classes
 
   # Get JSON for custom codemod
-  npx @cloudflare/kumo migrate --json > rename-map.json
+  npx @qw/design-system migrate --json > rename-map.json
 
 USING WITH sed:
-  npx @cloudflare/kumo migrate --classes | grep "^bg-\\|^text-" | \\
+  npx @qw/design-system migrate --classes | grep "^bg-\\|^text-" | \\
     while IFS= read -r line; do
       old=$(echo "$line" | awk '{print $1}')
       new=$(echo "$line" | awk '{print $3}')

@@ -14,8 +14,8 @@
  * - Icon buttons with tooltips (represented as icon-only buttons)
  * - Active state shows elevated background
  *
- * @see packages/kumo/src/components/menubar/menubar.tsx
- * @see packages/kumo/src/components/menubar/menubar.stories.tsx (FitContent story)
+ * @see packages/qw/src/components/menubar/menubar.tsx
+ * @see packages/qw/src/components/menubar/menubar.stories.tsx (FitContent story)
  */
 
 import {
@@ -35,7 +35,7 @@ import {
   VAR_NAMES,
 } from "./shared";
 import { createIconInstance, bindIconColor } from "./icon-utils";
-import registry from "@cloudflare/kumo/ai/component-registry.json";
+import registry from "@qw/design-system/ai/component-registry.json";
 
 // Read styling metadata from registry (added in Phase 7)
 const menuBarStyling = (registry.components.MenuBar as any).styling;

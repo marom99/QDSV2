@@ -75,7 +75,7 @@ export interface BlockSchema extends ComponentSchema {
   type: "block";
   /** Files that make up this block (relative to src/blocks/) */
   files: string[];
-  /** Component dependencies that must be installed from @cloudflare/kumo */
+  /** Component dependencies that must be installed from @qw/design-system */
   dependencies: string[];
 }
 

@@ -1,5 +1,5 @@
 {
-  "name": "@cloudflare/kumo",
+  "name": "@qw/design-system",
   "version": "2.1.0",
   "private": false,
   "type": "module",
@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cloudflare/kumo.git",
-    "directory": "packages/kumo"
+    "directory": "packages/qw"
   },
   "license": "MIT",
   "keywords": [
@@ -434,7 +434,7 @@
     "codegen:themes": "tsx scripts/theme-generator/index.ts",
     "migrate:tokens": "tsx scripts/theme-generator/migrate.ts",
     "codegen:primitives": "tsx scripts/generate-primitives.ts",
-    "codegen:registry": "pnpm --filter @cloudflare/kumo-docs-astro codegen:demos && tsx scripts/component-registry/index.ts",
+    "codegen:registry": "pnpm --filter @qw/design-system-docs-astro codegen:demos && tsx scripts/component-registry/index.ts",
     "lint": "pnpm run lint:oxlint",
     "lint:oxlint": "oxlint --config .oxlintrc.json src/** --type-aware",
     "test": "CI=true vitest run --project=unit",

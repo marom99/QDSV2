@@ -6,19 +6,19 @@
  * This data is used by the Figma plugin to create variable collections at runtime.
  *
  * Source:
- *   packages/kumo/scripts/theme-generator/config.ts
+ *   packages/qw/scripts/theme-generator/config.ts
  *
  * Output:
- *   packages/kumo-figma/src/generated/figma-variables.json
+ *   packages/qw-figma/src/generated/figma-variables.json
  *
  * Usage:
- *   pnpm run build:variables (from packages/kumo-figma)
+ *   pnpm run build:variables (from packages/qw-figma)
  */
 
 import { writeFileSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { THEME_CONFIG } from "@cloudflare/kumo/scripts/theme-generator/config";
+import { THEME_CONFIG } from "@qw/design-system/scripts/theme-generator/config";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -249,7 +249,7 @@ function main() {
   // Build output
   const output = {
     _generated: new Date().toISOString(),
-    _source: "packages/kumo/scripts/theme-generator/config.ts",
+    _source: "packages/qw/scripts/theme-generator/config.ts",
     collectionName: "kumo-colors",
     variables: colorVariables,
     byName: variablesByName,

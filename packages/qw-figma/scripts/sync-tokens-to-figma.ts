@@ -5,8 +5,8 @@
  * It purges all existing variables and recreates them from the config.
  *
  * Usage:
- *   FIGMA_TOKEN="your-token" pnpm --filter @cloudflare/kumo-figma figma:sync
- *   FIGMA_TOKEN="your-token" pnpm --filter @cloudflare/kumo-figma figma:sync get
+ *   FIGMA_TOKEN="your-token" pnpm --filter @qw/design-system-figma figma:sync
+ *   FIGMA_TOKEN="your-token" pnpm --filter @qw/design-system-figma figma:sync get
  *
  * Environment Variables:
  *   FIGMA_TOKEN (required) - Figma personal access token
@@ -19,8 +19,8 @@ import { fileURLToPath } from "node:url";
 import {
   THEME_CONFIG,
   AVAILABLE_THEMES,
-} from "../../kumo/scripts/theme-generator/config.js";
-import type { TokenDefinition } from "../../kumo/scripts/theme-generator/types.js";
+} from "../../qw/scripts/theme-generator/config.js";
+import type { TokenDefinition } from "../../qw/scripts/theme-generator/types.js";
 import { resolveColor } from "./color-utils.js";
 import {
   syncAllToFigma,
@@ -170,7 +170,7 @@ function getValidatedToken(): string {
     console.error("");
     console.error("Usage:");
     console.error(
-      '  FIGMA_TOKEN="your-token" pnpm --filter @cloudflare/kumo-figma figma:sync',
+      '  FIGMA_TOKEN="your-token" pnpm --filter @qw/design-system-figma figma:sync',
     );
     console.error("");
     console.error(

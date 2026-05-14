@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TableOfContents } from "@cloudflare/kumo";
+import { TableOfContents } from "@qw/design-system";
 
 const headings = [
   { text: "Introduction" },

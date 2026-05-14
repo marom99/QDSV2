@@ -3,7 +3,7 @@ description: "Install pnpm, Node.js, and project dependencies"
 
 inputs:
   filter:
-    description: "pnpm --filter value to scope install (e.g. '@cloudflare/kumo'). Omit for all packages."
+    description: "pnpm --filter value to scope install (e.g. '@qw/design-system'). Omit for all packages."
     required: false
 
 runs:

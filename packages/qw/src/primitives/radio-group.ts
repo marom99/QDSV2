@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { RadioGroup } from '@cloudflare/kumo/primitives/radio-group';
+ * import { RadioGroup } from '@qw/design-system/primitives/radio-group';
  * ```
  */
 

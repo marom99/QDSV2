@@ -25,8 +25,8 @@ export function getTailwindThemeCssPath(): string {
     // Local package node_modules
     process.cwd(),
     // Kumo package (sibling)
-    join(process.cwd(), "../kumo"),
-    // Monorepo root (from packages/kumo-figma -> ../..)
+    join(process.cwd(), "../qw"),
+    // Monorepo root (from packages/qw-figma -> ../..)
     join(process.cwd(), "../.."),
   ];
 
